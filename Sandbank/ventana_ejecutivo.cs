@@ -15,5 +15,12 @@ namespace Sandbank
         {
             InitializeComponent();
         }
+
+        private void button_creditoHipotecario_Click(object sender, EventArgs e)
+        {
+            ventana_creditoHipotecario vch = new ventana_creditoHipotecario();
+            vch.Show();
+        }
+
     }
 }
