@@ -21,10 +21,10 @@ namespace Sandbank
             Boolean encontrado = false;
             Cliente clCrud = new Cliente();
             Cliente cl = clCrud.Read(textBox_rut.Text);
-            if(cl == null) {
-
-               
-            } else {
+            Ejecutivo ejCrud = new Ejecutivo();
+            Ejecutivo ej = ejCrud.Read(textBox_rut.Text);
+            if (cl != null)
+            {
                 if (cl.Password.Equals(textBox_password.Text))
                 {
                     MessageBox.Show("Ingresó correctamente");
@@ -34,14 +34,41 @@ namespace Sandbank
                     vc.Visible = false;
                     vc.ShowDialog();
                     this.Dispose();
-                   
-                    
                 }
+                
                 else
                 {
                     MessageBox.Show("Password incorrecta");
                 }
+                    
             }
+            else if (ej != null)
+            { 
+                if (ej.Password.Equals(textBox_password.Text))
+                {
+                    
+                    MessageBox.Show("Ingresó correctamente");
+                    ventana_ejecutivo ve = new ventana_ejecutivo();
+                    ve.Show();
+                    this.Hide();
+                    ve.Visible = false;
+                    ve.ShowDialog();
+                    this.Dispose();
+                }
+
+                else
+                {
+                    MessageBox.Show("Password incorrecta");
+                }
+              
+            }
+
+            else if (ej == null && cl == null)   
+            {
+                MessageBox.Show("El rut ingresado es incorrecto");
+            }
+
+
         }
     }
 }
