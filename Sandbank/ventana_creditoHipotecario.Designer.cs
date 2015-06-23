@@ -50,14 +50,16 @@
             this.comboBox_añosCredito = new System.Windows.Forms.ComboBox();
             this.textBox_interes = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.calcular = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox_cuota = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(238, 311);
+            this.button1.Location = new System.Drawing.Point(278, 339);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
+            this.button1.Size = new System.Drawing.Size(111, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Ingresar cliente";
             this.button1.UseVisualStyleBackColor = true;
@@ -403,36 +405,58 @@
             // 
             // textBox_interes
             // 
+            this.textBox_interes.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBox_interes.Location = new System.Drawing.Point(148, 256);
             this.textBox_interes.Name = "textBox_interes";
+            this.textBox_interes.ReadOnly = true;
             this.textBox_interes.Size = new System.Drawing.Size(100, 20);
             this.textBox_interes.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 262);
+            this.label10.Location = new System.Drawing.Point(12, 259);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 21;
             this.label10.Text = "Interés";
             // 
-            // button2
+            // calcular
             // 
-            this.button2.Location = new System.Drawing.Point(15, 311);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Test";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.calcular.Location = new System.Drawing.Point(12, 339);
+            this.calcular.Name = "calcular";
+            this.calcular.Size = new System.Drawing.Size(111, 23);
+            this.calcular.TabIndex = 22;
+            this.calcular.Text = "Calcular interès";
+            this.calcular.UseVisualStyleBackColor = true;
+            this.calcular.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 286);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 13);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Cuota";
+            // 
+            // textBox_cuota
+            // 
+            this.textBox_cuota.ForeColor = System.Drawing.Color.Black;
+            this.textBox_cuota.Location = new System.Drawing.Point(148, 283);
+            this.textBox_cuota.Name = "textBox_cuota";
+            this.textBox_cuota.ReadOnly = true;
+            this.textBox_cuota.Size = new System.Drawing.Size(100, 20);
+            this.textBox_cuota.TabIndex = 24;
             // 
             // ventana_creditoHipotecario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 372);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(401, 413);
+            this.Controls.Add(this.textBox_cuota);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.calcular);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox_interes);
             this.Controls.Add(this.comboBox_añosCredito);
@@ -486,6 +510,8 @@
         private System.Windows.Forms.ComboBox comboBox_añosCredito;
         private System.Windows.Forms.TextBox textBox_interes;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button calcular;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox_cuota;
     }
 }

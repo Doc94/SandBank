@@ -37,6 +37,26 @@ namespace Sandbank
             double años = Convert.ToDouble(comboBox_añosCredito.SelectedItem);
             interes = K/años;
             textBox_interes.Text = interes.ToString("N2");
+            double monto = Convert.ToDouble(textBox_monto.Text);
+            double liquidacion = Convert.ToDouble(textBox_liquidacion.Text);
+            double cantcuotas = años * 12;
+            double cuotas = (monto / cantcuotas)*interes;
+
+
+            if ((liquidacion / 4) < cuotas)
+            {
+
+
+                textBox_cuota.Text = cuotas.ToString("N0");
+                textBox_cuota.ForeColor = System.Drawing.Color.Red;
+                MessageBox.Show("Su liquidacion no es suficiente debe aumentar los años del credito");
+            }
+
+            else
+            {
+                MessageBox.Show("Su credito hipotecario esta listo para ser aprobado");
+            }
+
         }
 
         
