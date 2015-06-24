@@ -67,7 +67,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textBox_interes = new System.Windows.Forms.TextBox();
             this.comboBox_añosCredito = new System.Windows.Forms.ComboBox();
-            this.textBox_monto = new System.Windows.Forms.TextBox();
+            this.textBox_montohipotecario = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -141,7 +141,7 @@
             this.tab_CreditoHipotecario.Controls.Add(this.label16);
             this.tab_CreditoHipotecario.Controls.Add(this.textBox_interes);
             this.tab_CreditoHipotecario.Controls.Add(this.comboBox_añosCredito);
-            this.tab_CreditoHipotecario.Controls.Add(this.textBox_monto);
+            this.tab_CreditoHipotecario.Controls.Add(this.textBox_montohipotecario);
             this.tab_CreditoHipotecario.Controls.Add(this.label17);
             this.tab_CreditoHipotecario.Controls.Add(this.label18);
             this.tab_CreditoHipotecario.Controls.Add(this.button1);
@@ -445,6 +445,7 @@
             // 
             this.textBox_password.Location = new System.Drawing.Point(153, 85);
             this.textBox_password.Name = "textBox_password";
+            this.textBox_password.ReadOnly = true;
             this.textBox_password.Size = new System.Drawing.Size(100, 20);
             this.textBox_password.TabIndex = 30;
             // 
@@ -637,12 +638,12 @@
             this.comboBox_añosCredito.TabIndex = 46;
             this.comboBox_añosCredito.Text = "Años";
             // 
-            // textBox_monto
+            // textBox_montohipotecario
             // 
-            this.textBox_monto.Location = new System.Drawing.Point(153, 213);
-            this.textBox_monto.Name = "textBox_monto";
-            this.textBox_monto.Size = new System.Drawing.Size(100, 20);
-            this.textBox_monto.TabIndex = 45;
+            this.textBox_montohipotecario.Location = new System.Drawing.Point(153, 213);
+            this.textBox_montohipotecario.Name = "textBox_montohipotecario";
+            this.textBox_montohipotecario.Size = new System.Drawing.Size(100, 20);
+            this.textBox_montohipotecario.TabIndex = 45;
             // 
             // label17
             // 
@@ -929,7 +930,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox_interes;
         private System.Windows.Forms.ComboBox comboBox_añosCredito;
-        private System.Windows.Forms.TextBox textBox_monto;
+        private System.Windows.Forms.TextBox textBox_montohipotecario;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button button2;

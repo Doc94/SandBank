@@ -36,11 +36,12 @@ namespace Sandbank
                 textBox_apellidohipotecario.Text = "";
                 textBox_direccionhipotecario.Text = "";
                 textBox_liquidacionhipotecario.Text = "";
+                verificar = 0;
             }
             else
             {
                 verificar = 1;
-                textBox_nombrehipotecario.Text = cl.Rut;
+                textBox_nombrehipotecario.Text = cl.Nombre;
                 textBox_apellidohipotecario.Text = cl.Apellido;
                 textBox_direccionhipotecario.Text = cl.Direccion;
                 textBox_liquidacionhipotecario.Text = Convert.ToString(cl.Sueldo);
@@ -81,17 +82,17 @@ namespace Sandbank
 
             if (Convert.ToString(comboBox_añosCredito.SelectedItem).Equals(""))
             {
-
+                MessageBox.Show("Seleccione el plazo en años de su crédito");
             }
             else
             {
                 double interes;
                 double K = 70;
-                double años = Convert.ToDouble(comboBox_añosCredito.SelectedItem);
+                double años = Convert.ToSingle(comboBox_añosCredito.SelectedItem);
                 interes = K / años;
                 textBox_interes.Text = interes.ToString("N2");
-                double monto = Convert.ToDouble(textBox_monto.Text);
-                double liquidacion = Convert.ToDouble(textBox_liquidacionhipotecario.Text);
+                double monto = Convert.ToSingle(textBox_montohipotecario.Text);
+                double liquidacion = Convert.ToSingle(textBox_liquidacionhipotecario.Text);
                 double cantcuotas = años * 12;
                 double cuotas = (monto / cantcuotas) * interes;
 
@@ -111,13 +112,37 @@ namespace Sandbank
 
         private void button_registrar_Click(object sender, EventArgs e)
         {
-            int l = comboBox_año.Items.Count;
-            for (int i = 0; i < l; i++)
+            string mes = Convert.ToString(comboBox_mes.SelectedIndex + 1);
+            string mess = Convert.ToString(comboBox_mes.SelectedItem);
+            int dia = Convert.ToInt32(comboBox_dia.SelectedItem);
+            string año = Convert.ToString(comboBox_año.SelectedItem);
+            string d = Convert.ToString(comboBox_dia.SelectedItem);
+            Cliente clCrud = new Cliente();
+            Cliente cl = new Cliente();
+            cuentaCorriente ccCrud = new cuentaCorriente();
+            cuentaCorriente cc = new cuentaCorriente();
+            if ((mess.Equals("Febrero") && dia > 28) || ((mess.Equals("Abril") || mess.Equals("Junio") || mess.Equals("Septiembre") || mess.Equals("Noviembre")) && dia > 30) || (año.Equals("") || d.Equals("") || mes.Equals("")))
             {
-                comboBox_año.SelectedIndex = i;
-                if (comboBox_año.SelectedItem.ToString().Equals(textBox_rut.Text))
+                MessageBox.Show("Ingrese fecha válida");
+            }
+            else if (Convert.ToInt32(textBox_liquidacion.Text) < 400000)
+            {
+                MessageBox.Show("Su sueldo debe ser mayor a 400.000 lo sentimos");
+            }
+            else 
+            {
+                cl.Rut = textBox_rut.Text;
+                cl.Nombre = textBox_nombre.Text;
+                cl.Apellido = textBox_apellidop.Text;
+                cl.Direccion = textBox_direccion.Text;
+                cl.Fecha = d + "-" + mes + "-" + año;
+                cl.Sueldo = Convert.ToInt32(textBox_liquidacion.Text);
+                cl.Password = cl.Rut;
+                textBox_password.Text = textBox_rut.Text;
+
+                if(clCrud.crea_cliente(cl)&&ccCrud.crea_cuenta(cl))
                 {
-                    i = l + 1;
+                    MessageBox.Show("Cuenta corriente creada");
                 }
             }
         }
@@ -125,6 +150,7 @@ namespace Sandbank
         private void button3_Click(object sender, EventArgs e)
         {
             string mes = Convert.ToString(comboBox_meshipotecario.SelectedIndex+1);
+            string mess = Convert.ToString(comboBox_meshipotecario.SelectedItem);
             int dia = Convert.ToInt32(comboBox_diahipotecario.SelectedItem);
             string año = Convert.ToString(comboBox_añohipotecario.SelectedItem);
             string d = Convert.ToString(comboBox_diahipotecario.SelectedItem);
@@ -132,23 +158,28 @@ namespace Sandbank
             Cliente cl = new Cliente();
             cuentaCorriente ccCrud = new cuentaCorriente();
             cuentaCorriente cc = new cuentaCorriente();
+            creditoHipotecario chCrud = new creditoHipotecario();
+            creditoHipotecario ch = new creditoHipotecario();
             if (Convert.ToString(comboBox_añosCredito.SelectedItem).Equals(""))
             {
                 MessageBox.Show("Seleccione la cantidad de años del credito");
             }
-            else if ((mes.Equals("Febrero") && dia > 28) || ((mes.Equals("Abril") || mes.Equals("Junio") || mes.Equals("Septiembre") || mes.Equals("Noviembre")) && dia > 30) || (año.Equals("") || d.Equals("") || mes.Equals("")))
+            else if ((mess.Equals("Febrero") && dia > 28) || ((mess.Equals("Abril") || mess.Equals("Junio") || mess.Equals("Septiembre") || mess.Equals("Noviembre")) && dia > 30) || (año.Equals("") || d.Equals("") || mes.Equals("")))
             {
                 MessageBox.Show("Ingrese fecha válida");
             }
-
+            else if(Convert.ToInt32(textBox_liquidacionhipotecario.Text)<400000)
+            {
+                MessageBox.Show("Su sueldo debe ser mayor a 400.000 lo sentimos");
+            }
             else
             {
                 double interes;
                 double K = 70;
-                double años = Convert.ToDouble(comboBox_añosCredito.SelectedItem);
+                double años = Convert.ToSingle(comboBox_añosCredito.SelectedItem);
                 interes = K / años;
-                double monto = Convert.ToDouble(textBox_monto.Text);
-                double liquidacion = Convert.ToDouble(textBox_liquidacionhipotecario.Text);
+                double monto = Convert.ToSingle(textBox_montohipotecario.Text);
+                double liquidacion = Convert.ToSingle(textBox_liquidacionhipotecario.Text);
                 double cantcuotas = años * 12;
                 double cuotas = (monto / cantcuotas) * interes;
 
@@ -166,11 +197,31 @@ namespace Sandbank
                     cl.Fecha = d + "-" + mes + "-" + año;
                     cl.Sueldo = Convert.ToInt32(liquidacion);
                     cl.Password = textBox_ruthipotecario.Text;
-                    cc.Rut=textBox_ruthipotecario.Text;
-                    cc.Credito=Convert.ToInt32(liquidacion)*2;
-                    if (clCrud.crea_cliente(cl)&& ccCrud.crea_cuenta(cl))
+
+                    ch.Rut = textBox_ruthipotecario.Text;
+                    ch.Monto = Convert.ToInt32(textBox_montohipotecario.Text);
+                    ch.Interes = interes;
+                    ch.Plazo=Convert.ToInt32(comboBox_añosCredito.SelectedItem);
+                    ch.CantCuotas = ch.Plazo * 12;
+                    ch.ValorCuota = (int)((Convert.ToInt32(textBox_montohipotecario.Text) / ch.CantCuotas)*interes);
+                    ch.Saldo = Convert.ToInt32(textBox_montohipotecario.Text);
+                    ch.CuotasRestantes = ch.CantCuotas;
+                    ch.CuotasCanceladas = 0;
+                    if (verificar == 0)
                     {
-                        MessageBox.Show("Su credito ha sido aprobado");
+                        cc.Rut = textBox_ruthipotecario.Text;
+                        cc.Credito = Convert.ToInt32(liquidacion) * 2;
+                        if (clCrud.crea_cliente(cl) && ccCrud.crea_cuenta(cl))
+                        {
+                            MessageBox.Show("Su credito ha sido aprobado");
+                        }
+                    }
+                    else if (verificar == 1)
+                    {
+                        if ( chCrud.crea_credito(ch))
+                        {
+                            MessageBox.Show("Su credito ha sido aprobado");
+                        }
                     }
                     else
                     {

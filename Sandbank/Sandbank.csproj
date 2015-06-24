@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Cliente.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="creditoHipotecario.cs" />
     <Compile Include="cuentaCorriente.cs" />
     <Compile Include="Ejecutivo.cs" />
     <Compile Include="Form1.cs">

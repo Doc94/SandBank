@@ -23,14 +23,14 @@ namespace Sandbank
             int dia = Convert.ToInt32(comboBox_dia.SelectedItem);
             string año=Convert.ToString(comboBox_año.SelectedItem);
             string d= Convert.ToString(comboBox_año.SelectedItem);
-            double interes;
-            double K=70;
-            double años = Convert.ToDouble(comboBox_añosCredito.SelectedItem);
+            float interes;
+            float K=70;
+            float años = Convert.ToSingle(comboBox_añosCredito.SelectedItem);
             interes = K/años;
-            double monto = Convert.ToDouble(textBox_monto.Text);
-            double liquidacion = Convert.ToDouble(textBox_liquidacion.Text);
-            double cantcuotas = años * 12;
-            double cuotas = (monto / cantcuotas)*interes;
+            float monto = Convert.ToSingle(textBox_monto.Text);
+            float liquidacion = Convert.ToSingle(textBox_liquidacion.Text);
+            float cantcuotas = años * 12;
+            float cuotas = (monto / cantcuotas)*interes;
 
             Cliente cl = new Cliente();
             Cliente clcrud = new Cliente();
@@ -64,15 +64,15 @@ namespace Sandbank
         
         private void button2_Click(object sender, EventArgs e)
         {
-            double interes;
-            double K=70;
-            double años = Convert.ToDouble(comboBox_añosCredito.SelectedItem);
+            float interes;
+            float K=70;
+            float años = Convert.ToSingle(comboBox_añosCredito.SelectedItem);
             interes = K/años;
             textBox_interes.Text = interes.ToString("N2");
-            double monto = Convert.ToDouble(textBox_monto.Text);
-            double liquidacion = Convert.ToDouble(textBox_liquidacion.Text);
-            double cantcuotas = años * 12;
-            double cuotas = (monto / cantcuotas)*interes;
+            float monto = Convert.ToSingle(textBox_monto.Text);
+            float liquidacion = Convert.ToSingle(textBox_liquidacion.Text);
+            float cantcuotas = años * 12;
+            float cuotas = (monto / cantcuotas)*interes;
 
 
             if ((liquidacion / 4) < cuotas)
