@@ -114,5 +114,27 @@ namespace Sandbank
             return cl;
         }
 
+        public bool crea_cliente(Cliente c)
+        {
+            bool creado = false;
+
+            try
+            {
+                con.abreConexion();
+                SqlCommand comando = new SqlCommand();
+                comando.CommandText = "INSERT INTO clientes VALUES('" + c.Rut + "','" + c.Password + "','" + c.Nombre + "','" + c.Apellido + "','" + c.Direccion + "','" + c.Fecha + "'," + c.Sueldo + ")";
+                comando.Connection = con.usaConexion();
+                if (comando.ExecuteNonQuery() > 0)
+                    creado = true;
+            }
+            finally
+            {
+                con.cierraConexion();
+            }
+            return creado;
+
+
+        }
+
     }
 }

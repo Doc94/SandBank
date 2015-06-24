@@ -360,6 +360,7 @@
             this.label8.Size = new System.Drawing.Size(72, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "Monto crédito";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -369,6 +370,7 @@
             this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 17;
             this.label9.Text = "Años";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // textBox_monto
             // 
@@ -376,6 +378,7 @@
             this.textBox_monto.Name = "textBox_monto";
             this.textBox_monto.Size = new System.Drawing.Size(100, 20);
             this.textBox_monto.TabIndex = 18;
+            this.textBox_monto.TextChanged += new System.EventHandler(this.textBox_monto_TextChanged);
             // 
             // comboBox_añosCredito
             // 
@@ -402,6 +405,7 @@
             this.comboBox_añosCredito.Size = new System.Drawing.Size(46, 21);
             this.comboBox_añosCredito.TabIndex = 19;
             this.comboBox_añosCredito.Text = "Años";
+            this.comboBox_añosCredito.SelectedIndexChanged += new System.EventHandler(this.comboBox_añosCredito_SelectedIndexChanged);
             // 
             // textBox_interes
             // 
@@ -411,6 +415,7 @@
             this.textBox_interes.ReadOnly = true;
             this.textBox_interes.Size = new System.Drawing.Size(100, 20);
             this.textBox_interes.TabIndex = 20;
+            this.textBox_interes.TextChanged += new System.EventHandler(this.textBox_interes_TextChanged);
             // 
             // label10
             // 
@@ -420,6 +425,7 @@
             this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 21;
             this.label10.Text = "Interés";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // calcular
             // 
@@ -439,6 +445,7 @@
             this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 23;
             this.label11.Text = "Cuota";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // textBox_cuota
             // 
@@ -448,6 +455,7 @@
             this.textBox_cuota.ReadOnly = true;
             this.textBox_cuota.Size = new System.Drawing.Size(100, 20);
             this.textBox_cuota.TabIndex = 24;
+            this.textBox_cuota.TextChanged += new System.EventHandler(this.textBox_cuota_TextChanged);
             // 
             // ventana_creditoHipotecario
             // 
@@ -481,6 +489,7 @@
             this.Controls.Add(this.button1);
             this.Name = "ventana_creditoHipotecario";
             this.Text = "ventana_creditoHipotecario";
+            this.Load += new System.EventHandler(this.ventana_creditoHipotecario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
