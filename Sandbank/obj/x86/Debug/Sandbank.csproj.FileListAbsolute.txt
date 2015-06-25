@@ -1,0 +1,9 @@
+C:\Users\Administrador\Desktop\Nueva carpeta\SandBank-master\Sandbank\bin\Debug\Sandbank.exe
+C:\Users\Administrador\Desktop\Nueva carpeta\SandBank-master\Sandbank\bin\Debug\Sandbank.pdb
+C:\Users\Administrador\Desktop\Nueva carpeta\SandBank-master\Sandbank\obj\x86\Debug\Sandbank.Main.resources
+C:\Users\Administrador\Desktop\Nueva carpeta\SandBank-master\Sandbank\obj\x86\Debug\Sandbank.Properties.Resources.resources
+C:\Users\Administrador\Desktop\Nueva carpeta\SandBank-master\Sandbank\obj\x86\Debug\Sandbank.ventana_creditoHipotecario.resources
+C:\Users\Administrador\Desktop\Nueva carpeta\SandBank-master\Sandbank\obj\x86\Debug\Sandbank.ventana_ejecutivo.resources
+C:\Users\Administrador\Desktop\Nueva carpeta\SandBank-master\Sandbank\obj\x86\Debug\Sandbank.csproj.GenerateResource.Cache
+C:\Users\Administrador\Desktop\Nueva carpeta\SandBank-master\Sandbank\obj\x86\Debug\Sandbank.exe
+C:\Users\Administrador\Desktop\Nueva carpeta\SandBank-master\Sandbank\obj\x86\Debug\Sandbank.pdb
