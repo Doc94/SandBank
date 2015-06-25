@@ -30,8 +30,11 @@ namespace Sandbank
             get { return interes; }
             set { interes = value; }
         }
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> origin/master
         private int plazo;
 
         public int Plazo
@@ -86,7 +89,11 @@ namespace Sandbank
             {
                 con.abreConexion();
                 SqlCommand comando = new SqlCommand();
+<<<<<<< HEAD
                 comando.CommandText = "INSERT INTO credito_hipotecario VALUES('" + c.Rut + "'," + c.Monto + ",'" + c.Interes + "'," + c.Plazo + "," + c.CantCuotas + "," + c.ValorCuota + "," + c.Saldo + "," + c.CuotasRestantes + "," + c.CuotasCanceladas + ")";
+=======
+                comando.CommandText = "INSERT INTO credito_hipotecario VALUES('" + c.Rut + "'," + c.Monto + "," + c.Interes + "," + c.Plazo + "," + c.CantCuotas + "," + c.ValorCuota + "," + c.Saldo + "," + c.CuotasRestantes + "," + c.CuotasCanceladas + ")";
+>>>>>>> origin/master
                 comando.Connection = con.usaConexion();
                 if (comando.ExecuteNonQuery() > 0)
                     creado = true;

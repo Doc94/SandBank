@@ -41,6 +41,7 @@ namespace Sandbank
             }
             else
             {
+<<<<<<< HEAD
    
 
                 verificar = 1;
@@ -55,6 +56,9 @@ namespace Sandbank
                 comboBox_meshipotecario.Enabled = false;
 
                 //Se setean los nuevos valores
+=======
+                verificar = 1;
+>>>>>>> origin/master
                 textBox_nombrehipotecario.Text = cl.Nombre;
                 textBox_apellidohipotecario.Text = cl.Apellido;
                 textBox_direccionhipotecario.Text = cl.Direccion;
@@ -100,7 +104,10 @@ namespace Sandbank
             }
             else
             {
+<<<<<<< HEAD
                 button_hipotecario_aprobarcredito.Enabled = true;
+=======
+>>>>>>> origin/master
                 double interes;
                 double K = 70;
                 double años = Convert.ToSingle(comboBox_añosCredito.SelectedItem);
@@ -164,7 +171,10 @@ namespace Sandbank
 
         private void button3_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             button_hipotecario_aprobarcredito.Enabled = false;
+=======
+>>>>>>> origin/master
             string mes = Convert.ToString(comboBox_meshipotecario.SelectedIndex+1);
             string mess = Convert.ToString(comboBox_meshipotecario.SelectedItem);
             int dia = Convert.ToInt32(comboBox_diahipotecario.SelectedItem);

@@ -31,10 +31,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Principal = new System.Windows.Forms.TabPage();
             this.tab_crearCuenta = new System.Windows.Forms.TabPage();
+<<<<<<< HEAD
             this.button_registrar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_password = new System.Windows.Forms.TextBox();
+=======
+            this.tab_CreditoHipotecario = new System.Windows.Forms.TabPage();
+>>>>>>> origin/master
             this.textBox_liquidacion = new System.Windows.Forms.TextBox();
             this.comboBox_año = new System.Windows.Forms.ComboBox();
             this.comboBox_mes = new System.Windows.Forms.ComboBox();
@@ -49,6 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.tab_CreditoHipotecario = new System.Windows.Forms.TabPage();
             this.button_hipotecario_aprobarcredito = new System.Windows.Forms.Button();
             this.comboBox_añohipotecario = new System.Windows.Forms.ComboBox();
@@ -64,6 +69,12 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+=======
+            this.textBox_password = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button_registrar = new System.Windows.Forms.Button();
+>>>>>>> origin/master
             this.textBox_liquidacionhipotecario = new System.Windows.Forms.TextBox();
             this.textBox_direccionhipotecario = new System.Windows.Forms.TextBox();
             this.textBox_apellidohipotecario = new System.Windows.Forms.TextBox();
@@ -75,6 +86,23 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox_cuota = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox_interes = new System.Windows.Forms.TextBox();
+            this.comboBox_añosCredito = new System.Windows.Forms.ComboBox();
+            this.textBox_montohipotecario = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboBox_añohipotecario = new System.Windows.Forms.ComboBox();
+            this.comboBox_meshipotecario = new System.Windows.Forms.ComboBox();
+            this.comboBox_diahipotecario = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+>>>>>>> origin/master
             this.tabControl1.SuspendLayout();
             this.tab_crearCuenta.SuspendLayout();
             this.tab_CreditoHipotecario.SuspendLayout();
@@ -129,6 +157,7 @@
             this.tab_crearCuenta.Text = "Cuenta corriente";
             this.tab_crearCuenta.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // button_registrar
             // 
             this.button_registrar.Location = new System.Drawing.Point(20, 274);
@@ -164,6 +193,41 @@
             this.textBox_password.ReadOnly = true;
             this.textBox_password.Size = new System.Drawing.Size(100, 20);
             this.textBox_password.TabIndex = 30;
+=======
+            // tab_CreditoHipotecario
+            // 
+            this.tab_CreditoHipotecario.Controls.Add(this.button3);
+            this.tab_CreditoHipotecario.Controls.Add(this.comboBox_añohipotecario);
+            this.tab_CreditoHipotecario.Controls.Add(this.comboBox_meshipotecario);
+            this.tab_CreditoHipotecario.Controls.Add(this.comboBox_diahipotecario);
+            this.tab_CreditoHipotecario.Controls.Add(this.button2);
+            this.tab_CreditoHipotecario.Controls.Add(this.textBox_cuota);
+            this.tab_CreditoHipotecario.Controls.Add(this.label15);
+            this.tab_CreditoHipotecario.Controls.Add(this.label16);
+            this.tab_CreditoHipotecario.Controls.Add(this.textBox_interes);
+            this.tab_CreditoHipotecario.Controls.Add(this.comboBox_añosCredito);
+            this.tab_CreditoHipotecario.Controls.Add(this.textBox_montohipotecario);
+            this.tab_CreditoHipotecario.Controls.Add(this.label17);
+            this.tab_CreditoHipotecario.Controls.Add(this.label18);
+            this.tab_CreditoHipotecario.Controls.Add(this.button1);
+            this.tab_CreditoHipotecario.Controls.Add(this.textBox_liquidacionhipotecario);
+            this.tab_CreditoHipotecario.Controls.Add(this.textBox_direccionhipotecario);
+            this.tab_CreditoHipotecario.Controls.Add(this.textBox_apellidohipotecario);
+            this.tab_CreditoHipotecario.Controls.Add(this.textBox_nombrehipotecario);
+            this.tab_CreditoHipotecario.Controls.Add(this.textBox_ruthipotecario);
+            this.tab_CreditoHipotecario.Controls.Add(this.label9);
+            this.tab_CreditoHipotecario.Controls.Add(this.label10);
+            this.tab_CreditoHipotecario.Controls.Add(this.label11);
+            this.tab_CreditoHipotecario.Controls.Add(this.label12);
+            this.tab_CreditoHipotecario.Controls.Add(this.label13);
+            this.tab_CreditoHipotecario.Controls.Add(this.label14);
+            this.tab_CreditoHipotecario.Location = new System.Drawing.Point(4, 22);
+            this.tab_CreditoHipotecario.Name = "tab_CreditoHipotecario";
+            this.tab_CreditoHipotecario.Size = new System.Drawing.Size(412, 448);
+            this.tab_CreditoHipotecario.TabIndex = 2;
+            this.tab_CreditoHipotecario.Text = "Credito Hipotecario";
+            this.tab_CreditoHipotecario.UseVisualStyleBackColor = true;
+>>>>>>> origin/master
             // 
             // textBox_liquidacion
             // 
@@ -174,7 +238,10 @@
             // 
             // comboBox_año
             // 
+<<<<<<< HEAD
             this.comboBox_año.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+=======
+>>>>>>> origin/master
             this.comboBox_año.FormattingEnabled = true;
             this.comboBox_año.Items.AddRange(new object[] {
             "1900",
@@ -297,10 +364,17 @@
             this.comboBox_año.Name = "comboBox_año";
             this.comboBox_año.Size = new System.Drawing.Size(59, 21);
             this.comboBox_año.TabIndex = 28;
+<<<<<<< HEAD
             // 
             // comboBox_mes
             // 
             this.comboBox_mes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+=======
+            this.comboBox_año.Text = "Año";
+            // 
+            // comboBox_mes
+            // 
+>>>>>>> origin/master
             this.comboBox_mes.FormattingEnabled = true;
             this.comboBox_mes.Items.AddRange(new object[] {
             "Enero",
@@ -319,10 +393,17 @@
             this.comboBox_mes.Name = "comboBox_mes";
             this.comboBox_mes.Size = new System.Drawing.Size(77, 21);
             this.comboBox_mes.TabIndex = 27;
+<<<<<<< HEAD
             // 
             // comboBox_dia
             // 
             this.comboBox_dia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+=======
+            this.comboBox_mes.Text = "Mes";
+            // 
+            // comboBox_dia
+            // 
+>>>>>>> origin/master
             this.comboBox_dia.FormattingEnabled = true;
             this.comboBox_dia.Items.AddRange(new object[] {
             "1",
@@ -360,6 +441,10 @@
             this.comboBox_dia.Name = "comboBox_dia";
             this.comboBox_dia.Size = new System.Drawing.Size(46, 21);
             this.comboBox_dia.TabIndex = 26;
+<<<<<<< HEAD
+=======
+            this.comboBox_dia.Text = "Día";
+>>>>>>> origin/master
             // 
             // textBox_direccion
             // 
@@ -443,6 +528,7 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Nombre";
             // 
+<<<<<<< HEAD
             // tab_CreditoHipotecario
             // 
             this.tab_CreditoHipotecario.Controls.Add(this.button_hipotecario_aprobarcredito);
@@ -686,6 +772,142 @@
             this.button2.Text = "Calcular cuota";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+=======
+            // textBox_password
+            // 
+            this.textBox_password.Location = new System.Drawing.Point(153, 85);
+            this.textBox_password.Name = "textBox_password";
+            this.textBox_password.ReadOnly = true;
+            this.textBox_password.Size = new System.Drawing.Size(100, 20);
+            this.textBox_password.TabIndex = 30;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Password";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(116, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(166, 13);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Crear una nueva cuenta corriente";
+            // 
+            // button_registrar
+            // 
+            this.button_registrar.Location = new System.Drawing.Point(20, 274);
+            this.button_registrar.Name = "button_registrar";
+            this.button_registrar.Size = new System.Drawing.Size(137, 23);
+            this.button_registrar.TabIndex = 33;
+            this.button_registrar.Text = "Crear cuenta corriente";
+            this.button_registrar.UseVisualStyleBackColor = true;
+            this.button_registrar.Click += new System.EventHandler(this.button_registrar_Click);
+            // 
+            // textBox_liquidacionhipotecario
+            // 
+            this.textBox_liquidacionhipotecario.Location = new System.Drawing.Point(153, 185);
+            this.textBox_liquidacionhipotecario.Name = "textBox_liquidacionhipotecario";
+            this.textBox_liquidacionhipotecario.Size = new System.Drawing.Size(100, 20);
+            this.textBox_liquidacionhipotecario.TabIndex = 40;
+            // 
+            // textBox_direccionhipotecario
+            // 
+            this.textBox_direccionhipotecario.Location = new System.Drawing.Point(153, 128);
+            this.textBox_direccionhipotecario.Name = "textBox_direccionhipotecario";
+            this.textBox_direccionhipotecario.Size = new System.Drawing.Size(100, 20);
+            this.textBox_direccionhipotecario.TabIndex = 39;
+            // 
+            // textBox_apellidohipotecario
+            // 
+            this.textBox_apellidohipotecario.Location = new System.Drawing.Point(153, 101);
+            this.textBox_apellidohipotecario.Name = "textBox_apellidohipotecario";
+            this.textBox_apellidohipotecario.Size = new System.Drawing.Size(100, 20);
+            this.textBox_apellidohipotecario.TabIndex = 38;
+            // 
+            // textBox_nombrehipotecario
+            // 
+            this.textBox_nombrehipotecario.Location = new System.Drawing.Point(153, 72);
+            this.textBox_nombrehipotecario.Name = "textBox_nombrehipotecario";
+            this.textBox_nombrehipotecario.Size = new System.Drawing.Size(100, 20);
+            this.textBox_nombrehipotecario.TabIndex = 37;
+            // 
+            // textBox_ruthipotecario
+            // 
+            this.textBox_ruthipotecario.Location = new System.Drawing.Point(153, 45);
+            this.textBox_ruthipotecario.Name = "textBox_ruthipotecario";
+            this.textBox_ruthipotecario.Size = new System.Drawing.Size(100, 20);
+            this.textBox_ruthipotecario.TabIndex = 36;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(17, 192);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 13);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Liquidación";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 162);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 13);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Fecha de nacimiento";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 134);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Direccion";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 45);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(24, 13);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Rut";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(17, 101);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 13);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Apellido";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(17, 72);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 13);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Nombre";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(263, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 23);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Verificar cuenta corriente";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+>>>>>>> origin/master
             // 
             // textBox_cuota
             // 
@@ -725,7 +947,10 @@
             // 
             // comboBox_añosCredito
             // 
+<<<<<<< HEAD
             this.comboBox_añosCredito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+=======
+>>>>>>> origin/master
             this.comboBox_añosCredito.FormattingEnabled = true;
             this.comboBox_añosCredito.Items.AddRange(new object[] {
             "20",
@@ -748,6 +973,10 @@
             this.comboBox_añosCredito.Name = "comboBox_añosCredito";
             this.comboBox_añosCredito.Size = new System.Drawing.Size(46, 21);
             this.comboBox_añosCredito.TabIndex = 46;
+<<<<<<< HEAD
+=======
+            this.comboBox_añosCredito.Text = "Años";
+>>>>>>> origin/master
             // 
             // textBox_montohipotecario
             // 
@@ -774,6 +1003,7 @@
             this.label18.TabIndex = 43;
             this.label18.Text = "Monto crédito";
             // 
+<<<<<<< HEAD
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(263, 45);
@@ -872,6 +1102,216 @@
             this.label14.Size = new System.Drawing.Size(44, 13);
             this.label14.TabIndex = 30;
             this.label14.Text = "Nombre";
+=======
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(20, 329);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 23);
+            this.button2.TabIndex = 51;
+            this.button2.Text = "Calcular cuota";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // comboBox_añohipotecario
+            // 
+            this.comboBox_añohipotecario.FormattingEnabled = true;
+            this.comboBox_añohipotecario.Items.AddRange(new object[] {
+            "1900",
+            "1901",
+            "1902",
+            "1903",
+            "1904",
+            "1905",
+            "1906",
+            "1907",
+            "1908",
+            "1909",
+            "1910",
+            "1911",
+            "1912",
+            "1913",
+            "1914",
+            "1915",
+            "1916",
+            "1917",
+            "1918",
+            "1919",
+            "1920",
+            "1921",
+            "1922",
+            "1923",
+            "1924",
+            "1925",
+            "1926",
+            "1927",
+            "1928",
+            "1929",
+            "1930",
+            "1931",
+            "1932",
+            "1933",
+            "1934",
+            "1935",
+            "1936",
+            "1937",
+            "1938",
+            "1939",
+            "1940",
+            "1941",
+            "1942",
+            "1943",
+            "1944",
+            "1945",
+            "1946",
+            "1947",
+            "1948",
+            "1949",
+            "1950",
+            "1951",
+            "1952",
+            "1953",
+            "1954",
+            "1955",
+            "1956",
+            "1957",
+            "1958",
+            "1959",
+            "1960",
+            "1961",
+            "1962",
+            "1963",
+            "1964",
+            "1965",
+            "1966",
+            "1967",
+            "1968",
+            "1969",
+            "1970",
+            "1971",
+            "1972",
+            "1973",
+            "1974",
+            "1975",
+            "1976",
+            "1977",
+            "1978",
+            "1979",
+            "1980",
+            "1981",
+            "1982",
+            "1983",
+            "1984",
+            "1985",
+            "1986",
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015"});
+            this.comboBox_añohipotecario.Location = new System.Drawing.Point(288, 158);
+            this.comboBox_añohipotecario.Name = "comboBox_añohipotecario";
+            this.comboBox_añohipotecario.Size = new System.Drawing.Size(59, 21);
+            this.comboBox_añohipotecario.TabIndex = 54;
+            this.comboBox_añohipotecario.Text = "Año";
+            // 
+            // comboBox_meshipotecario
+            // 
+            this.comboBox_meshipotecario.FormattingEnabled = true;
+            this.comboBox_meshipotecario.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.comboBox_meshipotecario.Location = new System.Drawing.Point(205, 158);
+            this.comboBox_meshipotecario.Name = "comboBox_meshipotecario";
+            this.comboBox_meshipotecario.Size = new System.Drawing.Size(77, 21);
+            this.comboBox_meshipotecario.TabIndex = 53;
+            this.comboBox_meshipotecario.Text = "Mes";
+            // 
+            // comboBox_diahipotecario
+            // 
+            this.comboBox_diahipotecario.FormattingEnabled = true;
+            this.comboBox_diahipotecario.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.comboBox_diahipotecario.Location = new System.Drawing.Point(153, 158);
+            this.comboBox_diahipotecario.Name = "comboBox_diahipotecario";
+            this.comboBox_diahipotecario.Size = new System.Drawing.Size(46, 21);
+            this.comboBox_diahipotecario.TabIndex = 52;
+            this.comboBox_diahipotecario.Text = "Día";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(263, 329);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(141, 23);
+            this.button3.TabIndex = 55;
+            this.button3.Text = "Aprobar crédito";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+>>>>>>> origin/master
             // 
             // ventana_ejecutivo
             // 
@@ -938,6 +1378,10 @@
         private System.Windows.Forms.ComboBox comboBox_añohipotecario;
         private System.Windows.Forms.ComboBox comboBox_meshipotecario;
         private System.Windows.Forms.ComboBox comboBox_diahipotecario;
+<<<<<<< HEAD
         private System.Windows.Forms.Button button_hipotecario_aprobarcredito;
+=======
+        private System.Windows.Forms.Button button3;
+>>>>>>> origin/master
     }
 }
