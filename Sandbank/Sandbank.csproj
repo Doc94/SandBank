@@ -90,6 +90,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ventana_cliente.resx">
+      <DependentUpon>ventana_cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ventana_creditoHipotecario.resx">
       <DependentUpon>ventana_creditoHipotecario.cs</DependentUpon>
     </EmbeddedResource>

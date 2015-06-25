@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana_ejecutivo));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Principal = new System.Windows.Forms.TabPage();
             this.tab_crearCuenta = new System.Windows.Forms.TabPage();
@@ -75,9 +76,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tab_crearCuenta.SuspendLayout();
             this.tab_CreditoHipotecario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -94,6 +99,8 @@
             // 
             // Principal
             // 
+            this.Principal.BackgroundImage = global::Sandbank.Properties.Resources.logo;
+            this.Principal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Principal.Location = new System.Drawing.Point(4, 22);
             this.Principal.Name = "Principal";
             this.Principal.Padding = new System.Windows.Forms.Padding(3);
@@ -104,6 +111,8 @@
             // 
             // tab_crearCuenta
             // 
+            this.tab_crearCuenta.BackColor = System.Drawing.Color.Aquamarine;
+            this.tab_crearCuenta.Controls.Add(this.pictureBox1);
             this.tab_crearCuenta.Controls.Add(this.button_registrar);
             this.tab_crearCuenta.Controls.Add(this.label8);
             this.tab_crearCuenta.Controls.Add(this.label1);
@@ -128,11 +137,12 @@
             this.tab_crearCuenta.Size = new System.Drawing.Size(412, 448);
             this.tab_crearCuenta.TabIndex = 1;
             this.tab_crearCuenta.Text = "Cuenta corriente";
-            this.tab_crearCuenta.UseVisualStyleBackColor = true;
             // 
             // button_registrar
             // 
-            this.button_registrar.Location = new System.Drawing.Point(20, 274);
+            this.button_registrar.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_registrar.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button_registrar.Location = new System.Drawing.Point(35, 338);
             this.button_registrar.Name = "button_registrar";
             this.button_registrar.Size = new System.Drawing.Size(137, 23);
             this.button_registrar.TabIndex = 33;
@@ -143,24 +153,27 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(116, 15);
+            this.label8.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label8.Location = new System.Drawing.Point(97, 58);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 13);
+            this.label8.Size = new System.Drawing.Size(265, 23);
             this.label8.TabIndex = 32;
             this.label8.Text = "Crear una nueva cuenta corriente";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 85);
+            this.label1.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(57, 15);
             this.label1.TabIndex = 31;
             this.label1.Text = "Password";
             // 
             // textBox_password
             // 
-            this.textBox_password.Location = new System.Drawing.Point(153, 85);
+            this.textBox_password.Location = new System.Drawing.Point(168, 120);
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.ReadOnly = true;
             this.textBox_password.Size = new System.Drawing.Size(100, 20);
@@ -168,7 +181,7 @@
             // 
             // textBox_liquidacion
             // 
-            this.textBox_liquidacion.Location = new System.Drawing.Point(153, 223);
+            this.textBox_liquidacion.Location = new System.Drawing.Point(168, 290);
             this.textBox_liquidacion.Name = "textBox_liquidacion";
             this.textBox_liquidacion.Size = new System.Drawing.Size(100, 20);
             this.textBox_liquidacion.TabIndex = 29;
@@ -295,7 +308,7 @@
             "2013",
             "2014",
             "2015"});
-            this.comboBox_año.Location = new System.Drawing.Point(288, 197);
+            this.comboBox_año.Location = new System.Drawing.Point(303, 250);
             this.comboBox_año.Name = "comboBox_año";
             this.comboBox_año.Size = new System.Drawing.Size(59, 21);
             this.comboBox_año.TabIndex = 28;
@@ -318,7 +331,7 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.comboBox_mes.Location = new System.Drawing.Point(205, 197);
+            this.comboBox_mes.Location = new System.Drawing.Point(220, 250);
             this.comboBox_mes.Name = "comboBox_mes";
             this.comboBox_mes.Size = new System.Drawing.Size(77, 21);
             this.comboBox_mes.TabIndex = 27;
@@ -360,35 +373,35 @@
             "29",
             "30",
             "31"});
-            this.comboBox_dia.Location = new System.Drawing.Point(153, 197);
+            this.comboBox_dia.Location = new System.Drawing.Point(168, 250);
             this.comboBox_dia.Name = "comboBox_dia";
             this.comboBox_dia.Size = new System.Drawing.Size(46, 21);
             this.comboBox_dia.TabIndex = 26;
             // 
             // textBox_direccion
             // 
-            this.textBox_direccion.Location = new System.Drawing.Point(153, 166);
+            this.textBox_direccion.Location = new System.Drawing.Point(168, 219);
             this.textBox_direccion.Name = "textBox_direccion";
-            this.textBox_direccion.Size = new System.Drawing.Size(100, 20);
+            this.textBox_direccion.Size = new System.Drawing.Size(194, 20);
             this.textBox_direccion.TabIndex = 25;
             // 
             // textBox_apellidop
             // 
-            this.textBox_apellidop.Location = new System.Drawing.Point(153, 139);
+            this.textBox_apellidop.Location = new System.Drawing.Point(168, 185);
             this.textBox_apellidop.Name = "textBox_apellidop";
             this.textBox_apellidop.Size = new System.Drawing.Size(100, 20);
             this.textBox_apellidop.TabIndex = 24;
             // 
             // textBox_nombre
             // 
-            this.textBox_nombre.Location = new System.Drawing.Point(153, 110);
+            this.textBox_nombre.Location = new System.Drawing.Point(168, 150);
             this.textBox_nombre.Name = "textBox_nombre";
             this.textBox_nombre.Size = new System.Drawing.Size(100, 20);
             this.textBox_nombre.TabIndex = 23;
             // 
             // textBox_rut
             // 
-            this.textBox_rut.Location = new System.Drawing.Point(153, 58);
+            this.textBox_rut.Location = new System.Drawing.Point(168, 87);
             this.textBox_rut.Name = "textBox_rut";
             this.textBox_rut.Size = new System.Drawing.Size(100, 20);
             this.textBox_rut.TabIndex = 22;
@@ -396,59 +409,67 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 230);
+            this.label7.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(32, 293);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.Size = new System.Drawing.Size(70, 15);
             this.label7.TabIndex = 21;
             this.label7.Text = "Liquidación";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 200);
+            this.label6.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(32, 253);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 13);
+            this.label6.Size = new System.Drawing.Size(119, 15);
             this.label6.TabIndex = 20;
             this.label6.Text = "Fecha de nacimiento";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 172);
+            this.label5.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(32, 222);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 19;
             this.label5.Text = "Direccion";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 58);
+            this.label4.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(32, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 13);
+            this.label4.Size = new System.Drawing.Size(27, 15);
             this.label4.TabIndex = 18;
             this.label4.Text = "Rut";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 139);
+            this.label3.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(32, 188);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 17;
             this.label3.Text = "Apellido";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 110);
+            this.label2.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(32, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 16;
             this.label2.Text = "Nombre";
             // 
             // tab_CreditoHipotecario
             // 
+            this.tab_CreditoHipotecario.BackColor = System.Drawing.Color.Aquamarine;
+            this.tab_CreditoHipotecario.Controls.Add(this.pictureBox2);
             this.tab_CreditoHipotecario.Controls.Add(this.button_hipotecario_aprobarcredito);
             this.tab_CreditoHipotecario.Controls.Add(this.comboBox_añohipotecario);
             this.tab_CreditoHipotecario.Controls.Add(this.comboBox_meshipotecario);
@@ -479,13 +500,14 @@
             this.tab_CreditoHipotecario.Size = new System.Drawing.Size(412, 448);
             this.tab_CreditoHipotecario.TabIndex = 2;
             this.tab_CreditoHipotecario.Text = "Credito Hipotecario";
-            this.tab_CreditoHipotecario.UseVisualStyleBackColor = true;
             this.tab_CreditoHipotecario.Click += new System.EventHandler(this.tab_CreditoHipotecario_Click);
             // 
             // button_hipotecario_aprobarcredito
             // 
             this.button_hipotecario_aprobarcredito.Enabled = false;
-            this.button_hipotecario_aprobarcredito.Location = new System.Drawing.Point(263, 329);
+            this.button_hipotecario_aprobarcredito.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_hipotecario_aprobarcredito.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button_hipotecario_aprobarcredito.Location = new System.Drawing.Point(263, 372);
             this.button_hipotecario_aprobarcredito.Name = "button_hipotecario_aprobarcredito";
             this.button_hipotecario_aprobarcredito.Size = new System.Drawing.Size(141, 23);
             this.button_hipotecario_aprobarcredito.TabIndex = 55;
@@ -615,7 +637,7 @@
             "2013",
             "2014",
             "2015"});
-            this.comboBox_añohipotecario.Location = new System.Drawing.Point(288, 158);
+            this.comboBox_añohipotecario.Location = new System.Drawing.Point(288, 201);
             this.comboBox_añohipotecario.Name = "comboBox_añohipotecario";
             this.comboBox_añohipotecario.Size = new System.Drawing.Size(59, 21);
             this.comboBox_añohipotecario.TabIndex = 54;
@@ -638,7 +660,7 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.comboBox_meshipotecario.Location = new System.Drawing.Point(205, 158);
+            this.comboBox_meshipotecario.Location = new System.Drawing.Point(205, 201);
             this.comboBox_meshipotecario.Name = "comboBox_meshipotecario";
             this.comboBox_meshipotecario.Size = new System.Drawing.Size(77, 21);
             this.comboBox_meshipotecario.TabIndex = 53;
@@ -680,14 +702,16 @@
             "29",
             "30",
             "31"});
-            this.comboBox_diahipotecario.Location = new System.Drawing.Point(153, 158);
+            this.comboBox_diahipotecario.Location = new System.Drawing.Point(153, 201);
             this.comboBox_diahipotecario.Name = "comboBox_diahipotecario";
             this.comboBox_diahipotecario.Size = new System.Drawing.Size(46, 21);
             this.comboBox_diahipotecario.TabIndex = 52;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(20, 329);
+            this.button2.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button2.Location = new System.Drawing.Point(20, 372);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 23);
             this.button2.TabIndex = 51;
@@ -698,7 +722,7 @@
             // textBox_cuota
             // 
             this.textBox_cuota.ForeColor = System.Drawing.Color.Black;
-            this.textBox_cuota.Location = new System.Drawing.Point(153, 294);
+            this.textBox_cuota.Location = new System.Drawing.Point(153, 337);
             this.textBox_cuota.Name = "textBox_cuota";
             this.textBox_cuota.ReadOnly = true;
             this.textBox_cuota.Size = new System.Drawing.Size(100, 20);
@@ -707,25 +731,27 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(17, 297);
+            this.label15.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(17, 340);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 13);
+            this.label15.Size = new System.Drawing.Size(40, 15);
             this.label15.TabIndex = 49;
             this.label15.Text = "Cuota";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(17, 270);
+            this.label16.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(17, 313);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(39, 13);
+            this.label16.Size = new System.Drawing.Size(43, 15);
             this.label16.TabIndex = 48;
             this.label16.Text = "Interés";
             // 
             // textBox_interes
             // 
             this.textBox_interes.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox_interes.Location = new System.Drawing.Point(153, 267);
+            this.textBox_interes.Location = new System.Drawing.Point(153, 310);
             this.textBox_interes.Name = "textBox_interes";
             this.textBox_interes.ReadOnly = true;
             this.textBox_interes.Size = new System.Drawing.Size(100, 20);
@@ -752,14 +778,14 @@
             "33",
             "34",
             "35"});
-            this.comboBox_añosCredito.Location = new System.Drawing.Point(153, 240);
+            this.comboBox_añosCredito.Location = new System.Drawing.Point(153, 283);
             this.comboBox_añosCredito.Name = "comboBox_añosCredito";
             this.comboBox_añosCredito.Size = new System.Drawing.Size(46, 21);
             this.comboBox_añosCredito.TabIndex = 46;
             // 
             // textBox_montohipotecario
             // 
-            this.textBox_montohipotecario.Location = new System.Drawing.Point(153, 213);
+            this.textBox_montohipotecario.Location = new System.Drawing.Point(153, 256);
             this.textBox_montohipotecario.Name = "textBox_montohipotecario";
             this.textBox_montohipotecario.Size = new System.Drawing.Size(100, 20);
             this.textBox_montohipotecario.TabIndex = 45;
@@ -767,24 +793,28 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(17, 243);
+            this.label17.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(17, 286);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(31, 13);
+            this.label17.Size = new System.Drawing.Size(34, 15);
             this.label17.TabIndex = 44;
             this.label17.Text = "Años";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(17, 220);
+            this.label18.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(17, 263);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(72, 13);
+            this.label18.Size = new System.Drawing.Size(85, 15);
             this.label18.TabIndex = 43;
             this.label18.Text = "Monto crédito";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(263, 45);
+            this.button1.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button1.Location = new System.Drawing.Point(263, 88);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 23);
             this.button1.TabIndex = 42;
@@ -794,35 +824,35 @@
             // 
             // textBox_liquidacionhipotecario
             // 
-            this.textBox_liquidacionhipotecario.Location = new System.Drawing.Point(153, 185);
+            this.textBox_liquidacionhipotecario.Location = new System.Drawing.Point(153, 228);
             this.textBox_liquidacionhipotecario.Name = "textBox_liquidacionhipotecario";
             this.textBox_liquidacionhipotecario.Size = new System.Drawing.Size(100, 20);
             this.textBox_liquidacionhipotecario.TabIndex = 40;
             // 
             // textBox_direccionhipotecario
             // 
-            this.textBox_direccionhipotecario.Location = new System.Drawing.Point(153, 128);
+            this.textBox_direccionhipotecario.Location = new System.Drawing.Point(153, 171);
             this.textBox_direccionhipotecario.Name = "textBox_direccionhipotecario";
             this.textBox_direccionhipotecario.Size = new System.Drawing.Size(100, 20);
             this.textBox_direccionhipotecario.TabIndex = 39;
             // 
             // textBox_apellidohipotecario
             // 
-            this.textBox_apellidohipotecario.Location = new System.Drawing.Point(153, 101);
+            this.textBox_apellidohipotecario.Location = new System.Drawing.Point(153, 144);
             this.textBox_apellidohipotecario.Name = "textBox_apellidohipotecario";
             this.textBox_apellidohipotecario.Size = new System.Drawing.Size(100, 20);
             this.textBox_apellidohipotecario.TabIndex = 38;
             // 
             // textBox_nombrehipotecario
             // 
-            this.textBox_nombrehipotecario.Location = new System.Drawing.Point(153, 72);
+            this.textBox_nombrehipotecario.Location = new System.Drawing.Point(153, 115);
             this.textBox_nombrehipotecario.Name = "textBox_nombrehipotecario";
             this.textBox_nombrehipotecario.Size = new System.Drawing.Size(100, 20);
             this.textBox_nombrehipotecario.TabIndex = 37;
             // 
             // textBox_ruthipotecario
             // 
-            this.textBox_ruthipotecario.Location = new System.Drawing.Point(153, 45);
+            this.textBox_ruthipotecario.Location = new System.Drawing.Point(153, 88);
             this.textBox_ruthipotecario.Name = "textBox_ruthipotecario";
             this.textBox_ruthipotecario.Size = new System.Drawing.Size(100, 20);
             this.textBox_ruthipotecario.TabIndex = 36;
@@ -830,70 +860,100 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 192);
+            this.label9.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(17, 235);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 13);
+            this.label9.Size = new System.Drawing.Size(70, 15);
             this.label9.TabIndex = 35;
             this.label9.Text = "Liquidación";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 162);
+            this.label10.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(17, 205);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 13);
+            this.label10.Size = new System.Drawing.Size(119, 15);
             this.label10.TabIndex = 34;
             this.label10.Text = "Fecha de nacimiento";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 134);
+            this.label11.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(17, 177);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.Size = new System.Drawing.Size(58, 15);
             this.label11.TabIndex = 33;
             this.label11.Text = "Direccion";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(17, 45);
+            this.label12.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(17, 88);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 13);
+            this.label12.Size = new System.Drawing.Size(27, 15);
             this.label12.TabIndex = 32;
             this.label12.Text = "Rut";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 101);
+            this.label13.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(17, 144);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 13);
+            this.label13.Size = new System.Drawing.Size(51, 15);
             this.label13.TabIndex = 31;
             this.label13.Text = "Apellido";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 72);
+            this.label14.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(17, 115);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(44, 13);
+            this.label14.Size = new System.Drawing.Size(51, 15);
             this.label14.TabIndex = 30;
             this.label14.Text = "Nombre";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sandbank.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Sandbank.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(129, 55);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 56;
+            this.pictureBox2.TabStop = false;
             // 
             // ventana_ejecutivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(420, 488);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ventana_ejecutivo";
-            this.Text = "ventana_ejecutivo";
+            this.Text = "Ejecutivo SandBank";
             this.tabControl1.ResumeLayout(false);
             this.tab_crearCuenta.ResumeLayout(false);
             this.tab_crearCuenta.PerformLayout();
             this.tab_CreditoHipotecario.ResumeLayout(false);
             this.tab_CreditoHipotecario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -947,5 +1007,7 @@
         private System.Windows.Forms.ComboBox comboBox_meshipotecario;
         private System.Windows.Forms.ComboBox comboBox_diahipotecario;
         private System.Windows.Forms.Button button_hipotecario_aprobarcredito;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

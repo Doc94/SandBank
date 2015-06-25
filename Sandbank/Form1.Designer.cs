@@ -77,6 +77,7 @@
             // button_ingresar
             // 
             this.button_ingresar.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ingresar.ForeColor = System.Drawing.Color.DarkGreen;
             this.button_ingresar.Location = new System.Drawing.Point(85, 161);
             this.button_ingresar.Name = "button_ingresar";
             this.button_ingresar.Size = new System.Drawing.Size(75, 23);
@@ -88,6 +89,7 @@
             // button_cancelar
             // 
             this.button_cancelar.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_cancelar.ForeColor = System.Drawing.Color.DarkGreen;
             this.button_cancelar.Location = new System.Drawing.Point(166, 161);
             this.button_cancelar.Name = "button_cancelar";
             this.button_cancelar.Size = new System.Drawing.Size(75, 23);
@@ -110,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.BackColor = System.Drawing.Color.Aquamarine;
             this.ClientSize = new System.Drawing.Size(291, 211);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_cancelar);
