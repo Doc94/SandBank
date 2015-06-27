@@ -25,3 +25,13 @@ C:\Users\David\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.Propert
 C:\Users\David\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.ventana_creditoHipotecario.resources
 C:\Users\David\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.ventana_ejecutivo.resources
 C:\Users\David\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.csproj.GenerateResource.Cache
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.exe
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.pdb
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.Main.resources
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.Properties.Resources.resources
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.ventana_cliente.resources
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.ventana_creditoHipotecario.resources
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.ventana_ejecutivo.resources
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.csproj.GenerateResource.Cache
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\bin\Debug\Sandbank.exe
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\bin\Debug\Sandbank.pdb

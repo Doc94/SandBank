@@ -29,6 +29,7 @@ namespace Sandbank
                 {
                     MessageBox.Show("Ingresó correctamente");
                     ventana_cliente vc = new ventana_cliente();
+                    vc.Elcliente = cl;
                     vc.Show();
                     this.Hide();
                     vc.Visible = false;
