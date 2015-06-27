@@ -28,12 +28,26 @@ namespace Sandbank
         {
             if(tabControl1.SelectedIndex == 0) { //En el tab de inicio
                 //Colocar nuevos datos
-                textBox_inicio_nombre.Text = elcliente.Nombre;
-                textBox_inicio_apellido.Text = elcliente.Apellido;
-                textBox_inicio_direccion.Text = elcliente.Direccion;
-                textBox_inicio_fecha.Text = elcliente.Fecha;
-
+                LoadProfile();               
             }
+        }
+
+        public void LoadProfile() {
+            textBox_inicio_nombre.Text = elcliente.Nombre;
+            textBox_inicio_apellido.Text = elcliente.Apellido;
+            textBox_inicio_direccion.Text = elcliente.Direccion;
+            textBox_inicio_fecha.Text = elcliente.Fecha;
+            textBox_inicio_sueldo.Text = elcliente.Sueldo.ToString();
+        }
+
+        private void ventana_cliente_Load(object sender, EventArgs e)
+        {
+            LoadProfile();
+        }
+
+        private void button_transferir_Click(object sender, EventArgs e)
+        {
+            //Iniciamos Comprobacion
         }
 
     }
