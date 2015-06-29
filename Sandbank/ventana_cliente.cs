@@ -29,13 +29,29 @@ namespace Sandbank
 
 
 
-            SqlDataAdapter daclientes = new SqlDataAdapter("SELECT * FROM transferencias where rut='"+r+"' or destinatario='"+r +"'", c.usaConexion());
+            SqlDataAdapter daclientes = new SqlDataAdapter("SELECT * FROM transferencias where rut='"+r+"'", c.usaConexion());
 
             DataSet dsclientes = new DataSet();
             daclientes.Fill(dsclientes, "transferencias");
 
             dataGridView1.DataSource = dsclientes;
             dataGridView1.DataMember = "transferencias";
+            c.cierraConexion();
+        }
+
+        public void abonos(string r)
+        {
+            Conexion c = Conexion.Instance();
+
+
+
+            SqlDataAdapter daclientes = new SqlDataAdapter("SELECT * FROM transferencias where destinatario='" + r + "'", c.usaConexion());
+
+            DataSet dsclientes = new DataSet();
+            daclientes.Fill(dsclientes, "transferencias");
+
+            dataGridView2.DataSource = dsclientes;
+            dataGridView2.DataMember = "transferencias";
             c.cierraConexion();
         }
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e) //Al cambiar de pestaña
@@ -47,6 +63,7 @@ namespace Sandbank
             if (tabControl1.SelectedIndex == 1)
             {
                 transferencias(elcliente.Rut);
+                abonos(elcliente.Rut);
             }
         }
 
@@ -65,41 +82,55 @@ namespace Sandbank
 
         private void button_transferir_Click(object sender, EventArgs e)
         {
-            cuentaCorriente rdestinatario = new cuentaCorriente();
-            cuentaCorriente rtranfer = new cuentaCorriente();
-            int saldo = rtranfer.Read(elcliente.Rut).Saldo;
-            int monto = Convert.ToInt32(textBox_transferencia_monto.Text);
-            DateTime Hoy = DateTime.Today;
-            string fecha_actual = Hoy.ToString("dd-MM-yyyy");
-            int numero = 10000;
-
-            Transferencia t = new Transferencia();
-            Transferencia tcrud = new Transferencia();
-
-            if ((saldo - monto) < 0)
+            cuentaCorriente ccrud = new cuentaCorriente();
+            cuentaCorriente rdestinatario = ccrud.Read(textBox_transferencia_rutdestiono.Text);
+            cuentaCorriente rtranfer = ccrud.Read(elcliente.Rut);
+            if (rdestinatario == null)
             {
-                MessageBox.Show("Saldo insuficiente para transferir ese monto");
+
             }
             else
             {
-                t.Numero = numero;
-                t.Rut = elcliente.Rut;
-                t.Monto = monto;
-                t.Comentario = textBox_transferencia_comentario.Text;
-                t.Destinatario = textBox_transferencia_rutdestiono.Text;
-                t.Fecha = fecha_actual;
+                int saldo = rtranfer.Read(elcliente.Rut).Saldo;
+                int monto = Convert.ToInt32(textBox_transferencia_monto.Text);
+                DateTime Hoy = DateTime.Today;
+                int saldo2 = saldo - monto;
+                string fecha_actual = Hoy.ToString("dd-MM-yyyy");
+                int numero = 7;
 
-                if (tcrud.crea_tranfer(t))
+                Transferencia t = new Transferencia();
+                Transferencia tcrud = new Transferencia();
+
+
+                if ((saldo - monto) < 0)
                 {
-                    MessageBox.Show("Transferencia realizada con éxito");
+                    MessageBox.Show("Saldo insuficiente para transferir ese monto");
                 }
                 else
                 {
-                    MessageBox.Show("ERROR!!");
-                }
-            }
+                    t.Numero = numero;
+                    t.Rut = elcliente.Rut;
+                    t.Monto = monto;
+                    t.Comentario = textBox_transferencia_comentario.Text;
+                    t.Destinatario = textBox_transferencia_rutdestiono.Text;
+                    t.Fecha = fecha_actual;
+                    rtranfer.Saldo = saldo2;
+                    rdestinatario.Saldo = rdestinatario.Saldo + monto;
 
-            //Iniciamos Comprobacion
+
+                    if (ccrud.update_cuenta(rdestinatario) && ccrud.update_cuenta(rtranfer) && tcrud.crea_tranfer(t))
+                    {
+
+                        MessageBox.Show("Transferencia realizada con éxito");
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR!!");
+                    }
+                }
+
+                //Iniciamos Comprobacion
+            }
         }
 
         

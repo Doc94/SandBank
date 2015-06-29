@@ -87,5 +87,27 @@ namespace Sandbank
 
             return cc;
         }
+
+        public bool update_cuenta(cuentaCorriente c)
+        {
+            bool update = false;
+
+            try
+            {
+                con.abreConexion();
+                SqlCommand comando = new SqlCommand();
+                comando.CommandText = "UPDATE cuenta_corriente SET saldo="+c.Saldo+" WHERE rut='"+c.Rut+"'";
+                comando.Connection = con.usaConexion();
+                if (comando.ExecuteNonQuery() > 0)
+                    update = true;
+            }
+            finally
+            {
+                con.cierraConexion();
+            }
+            return update;
+
+
+        }
     }
 }

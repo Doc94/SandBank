@@ -42,20 +42,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox_transferencia_comentario = new System.Windows.Forms.TextBox();
+            this.lblbl = new System.Windows.Forms.Label();
             this.button_transferir = new System.Windows.Forms.Button();
             this.textBox_transferencia_monto = new System.Windows.Forms.TextBox();
             this.textBox_transferencia_rutdestiono = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblbl = new System.Windows.Forms.Label();
-            this.textBox_transferencia_comentario = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -66,7 +70,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, -2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(742, 453);
+            this.tabControl1.Size = new System.Drawing.Size(656, 531);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -178,14 +182,27 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(734, 427);
+            this.tabPage2.Size = new System.Drawing.Size(648, 505);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cartola";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 35);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(648, 217);
+            this.dataGridView1.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -202,6 +219,22 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Transferir";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // textBox_transferencia_comentario
+            // 
+            this.textBox_transferencia_comentario.Location = new System.Drawing.Point(116, 121);
+            this.textBox_transferencia_comentario.Name = "textBox_transferencia_comentario";
+            this.textBox_transferencia_comentario.Size = new System.Drawing.Size(100, 20);
+            this.textBox_transferencia_comentario.TabIndex = 6;
+            // 
+            // lblbl
+            // 
+            this.lblbl.AutoSize = true;
+            this.lblbl.Location = new System.Drawing.Point(21, 121);
+            this.lblbl.Name = "lblbl";
+            this.lblbl.Size = new System.Drawing.Size(60, 13);
+            this.lblbl.TabIndex = 5;
+            this.lblbl.Text = "Comentario";
             // 
             // button_transferir
             // 
@@ -245,37 +278,38 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "RUT Destinatario";
             // 
-            // dataGridView1
+            // dataGridView2
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(728, 311);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 281);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(645, 224);
+            this.dataGridView2.TabIndex = 1;
             // 
-            // lblbl
+            // label8
             // 
-            this.lblbl.AutoSize = true;
-            this.lblbl.Location = new System.Drawing.Point(21, 121);
-            this.lblbl.Name = "lblbl";
-            this.lblbl.Size = new System.Drawing.Size(60, 13);
-            this.lblbl.TabIndex = 5;
-            this.lblbl.Text = "Comentario";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Transferencias";
             // 
-            // textBox_transferencia_comentario
+            // label9
             // 
-            this.textBox_transferencia_comentario.Location = new System.Drawing.Point(116, 121);
-            this.textBox_transferencia_comentario.Name = "textBox_transferencia_comentario";
-            this.textBox_transferencia_comentario.Size = new System.Drawing.Size(100, 20);
-            this.textBox_transferencia_comentario.TabIndex = 6;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(0, 259);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Abonos";
             // 
             // ventana_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 452);
+            this.ClientSize = new System.Drawing.Size(655, 529);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ventana_cliente";
@@ -285,9 +319,11 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,6 +352,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox_transferencia_comentario;
         private System.Windows.Forms.Label lblbl;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label9;
 
     }
 }
