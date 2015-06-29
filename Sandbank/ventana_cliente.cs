@@ -117,8 +117,13 @@ namespace Sandbank
                     t.Fecha = fecha_actual;
                     rtranfer.Saldo = saldo2;
                     rdestinatario.Saldo = rdestinatario.Saldo + monto;
-
-
+                    int saldodestino = rdestinatario.Saldo;
+                    if(ccrud.RealizarTransferencia(t.Rut,t.Destinatario,saldodestino, saldo2, t)) {
+                        MessageBox.Show("Transferencia realizada");
+                    } else {
+                        MessageBox.Show("ERROR!!");
+                    }
+                    /*
                     if (ccrud.update_cuenta(rdestinatario) && ccrud.update_cuenta(rtranfer) && tcrud.crea_tranfer(t))
                     {
 
@@ -128,20 +133,14 @@ namespace Sandbank
                     {
                         MessageBox.Show("ERROR!!");
                     }
+                     */
                 }
 
                 //Iniciamos Comprobacion
             }
         }
 
-        private void RealizarTransferencia() {
-            try {
-                cuentaCorriente rdestinatario = ccrud.Read(textBox_transferencia_rutdestiono.Text);
-                cuentaCorriente rtranfer = ccrud.Read(elcliente.Rut);
-            } catch {
-            }
-        }
-        
+      
 
 
         private void tabPage2_Click(object sender, EventArgs e)
