@@ -130,7 +130,7 @@ namespace Sandbank
                 if(comando.ExecuteNonQuery() < 1) {
                     return false;
                 }
-                comando.CommandText = "INSERT INTO transferencias VALUES(" + log.Numero + ",'" + log.Rut + "'," + log.Monto + ",'" + log.Comentario + "','" + log.Destinatario + "','" + log.Fecha + "')";
+                comando.CommandText = "INSERT INTO transferencias VALUES('" + log.Rut + "'," + log.Monto + ",'" + log.Comentario + "','" + log.Destinatario + "','" + log.Fecha + "')";
                 if(comando.ExecuteNonQuery() < 1) {
                     return false;
                 }

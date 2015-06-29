@@ -65,7 +65,7 @@ namespace Sandbank
             {
                 con.abreConexion();
                 SqlCommand comando = new SqlCommand();
-                comando.CommandText = "INSERT INTO transferencias VALUES(" + t.Numero + ",'" + t.Rut + "'," + t.Monto + ",'" + t.Comentario + "','" + t.Destinatario + "','" + t.Fecha + "')";
+                comando.CommandText = "INSERT INTO transferencias VALUES("  + t.Rut + "'," + t.Monto + ",'" + t.Comentario + "','" + t.Destinatario + "','" + t.Fecha + "')";
                 comando.Connection = con.usaConexion();
                 if (comando.ExecuteNonQuery() > 0)
                     creado = true;

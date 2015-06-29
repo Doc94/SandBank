@@ -96,7 +96,7 @@ namespace Sandbank
                 DateTime Hoy = DateTime.Today;
                 int saldo2 = saldo - monto;
                 string fecha_actual = Hoy.ToString("dd-MM-yyyy");
-                int numero = 7;
+                
 
                 Transferencia t = new Transferencia();
                 Transferencia tcrud = new Transferencia();
@@ -109,7 +109,7 @@ namespace Sandbank
                 else
                 {
                     
-                    t.Numero = numero;
+                    
                     t.Rut = elcliente.Rut;
                     t.Monto = monto;
                     t.Comentario = textBox_transferencia_comentario.Text;
@@ -118,7 +118,7 @@ namespace Sandbank
                     rtranfer.Saldo = saldo2;
                     rdestinatario.Saldo = rdestinatario.Saldo + monto;
                     int saldodestino = rdestinatario.Saldo;
-                    if(ccrud.RealizarTransferencia(t.Rut,t.Destinatario,saldodestino, saldo2, t)) {
+                    if(ccrud.RealizarTransferencia(t.Rut,t.Destinatario,saldo2, saldodestino, t)) {
                         MessageBox.Show("Transferencia realizada");
                     } else {
                         MessageBox.Show("ERROR!!");
