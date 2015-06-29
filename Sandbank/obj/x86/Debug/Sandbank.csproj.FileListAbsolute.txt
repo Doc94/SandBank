@@ -46,3 +46,4 @@ C:\Users\Alejandro\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.ven
 C:\Users\Alejandro\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.ventana_ejecutivo.resources
 C:\Users\Alejandro\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.csproj.GenerateResource.Cache
 C:\Users\Alejandro\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.csprojResolveAssemblyReference.cache
+C:\Users\Mauri\Documents\GitHub\SandBank\Sandbank\obj\x86\Debug\Sandbank.csprojResolveAssemblyReference.cache

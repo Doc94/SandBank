@@ -109,5 +109,39 @@ namespace Sandbank
 
 
         }
+
+        public Boolean RealizarTransferencia(String rut_origen, String rut_destino, int monto_origen, int monto_destino, Transferencia log) {
+            //Este metodo considera que hay saldo,
+            con.abreConexion();
+            //Iniciamos comando
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = con.usaConexion();
+            //Iniciamos la transaccion y la seteamos al comando
+            SqlTransaction trans = con.usaConexion().BeginTransaction();
+            comando.Transaction = trans;
+            try {
+
+                //Ejecutamos el comando
+                comando.CommandText = "UPDATE cuenta_corriente SET saldo=" + monto_origen + " WHERE rut=" + rut_origen;
+                if(comando.ExecuteNonQuery() < 1) {
+                    return false;
+                }
+                comando.CommandText = "UPDATE cuenta_corriente SET saldo=" + monto_destino + " WHERE rut=" + rut_destino;
+                if(comando.ExecuteNonQuery() < 1) {
+                    return false;
+                }
+                comando.CommandText = "INSERT INTO transferencias VALUES(" + log.Numero + ",'" + log.Rut + "'," + log.Monto + ",'" + log.Comentario + "','" + log.Destinatario + "','" + log.Fecha + "')";
+                if(comando.ExecuteNonQuery() < 1) {
+                    return false;
+                }
+                trans.Commit();
+                return true;
+            } catch {
+                trans.Rollback();
+            }
+            
+            con.cierraConexion();
+            return false;
+        }
     }
 }

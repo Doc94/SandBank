@@ -108,6 +108,7 @@ namespace Sandbank
                 }
                 else
                 {
+                    
                     t.Numero = numero;
                     t.Rut = elcliente.Rut;
                     t.Monto = monto;
@@ -133,7 +134,15 @@ namespace Sandbank
             }
         }
 
+        private void RealizarTransferencia() {
+            try {
+                cuentaCorriente rdestinatario = ccrud.Read(textBox_transferencia_rutdestiono.Text);
+                cuentaCorriente rtranfer = ccrud.Read(elcliente.Rut);
+            } catch {
+            }
+        }
         
+
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
