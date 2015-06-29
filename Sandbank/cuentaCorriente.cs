@@ -122,11 +122,11 @@ namespace Sandbank
             try {
 
                 //Ejecutamos el comando
-                comando.CommandText = "UPDATE cuenta_corriente SET saldo=" + monto_origen + " WHERE rut=" + rut_origen;
+                comando.CommandText = "UPDATE cuenta_corriente SET saldo=" + monto_origen + " WHERE rut='" + rut_origen + "'";
                 if(comando.ExecuteNonQuery() < 1) {
                     return false;
                 }
-                comando.CommandText = "UPDATE cuenta_corriente SET saldo=" + monto_destino + " WHERE rut=" + rut_destino;
+                comando.CommandText = "UPDATE cuenta_corriente SET saldo=" + monto_destino + " WHERE rut='" + rut_destino + "'";
                 if(comando.ExecuteNonQuery() < 1) {
                     return false;
                 }
