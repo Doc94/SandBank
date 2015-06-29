@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transferencia.cs" />
     <Compile Include="ventana_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
