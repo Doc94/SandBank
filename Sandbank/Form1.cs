@@ -18,57 +18,62 @@ namespace Sandbank
 
         private void button_ingresar_Click(object sender, EventArgs e)
         {
-            Boolean encontrado = false;
-            Cliente clCrud = new Cliente();
-            Cliente cl = clCrud.Read(textBox_rut.Text);
-            Ejecutivo ejCrud = new Ejecutivo();
-            Ejecutivo ej = ejCrud.Read(textBox_rut.Text);
-            if (cl != null)
+            if (textBox_rut.Text.Equals("") || textBox_password.Text.Equals(""))
             {
-                if (cl.Password.Equals(textBox_password.Text))
-                {
-                    MessageBox.Show("Ingresó correctamente");
-                    ventana_cliente vc = new ventana_cliente();
-                    vc.Elcliente = cl;
-                    vc.Show();
-                    this.Hide();
-                    vc.Visible = false;
-                    vc.ShowDialog();
-                    this.Dispose();
-                }
-                
-                else
-                {
-                    MessageBox.Show("Password incorrecta");
-                }
-                    
+                MessageBox.Show("Debe ingresar todos los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (ej != null)
-            { 
-                if (ej.Password.Equals(textBox_password.Text))
-                {
-                    
-                    MessageBox.Show("Ingresó correctamente");
-                    ventana_ejecutivo ve = new ventana_ejecutivo();
-                    ve.Show();
-                    this.Hide();
-                    ve.Visible = false;
-                    ve.ShowDialog();
-                    this.Dispose();
-                }
-
-                else
-                {
-                    MessageBox.Show("Password incorrecta");
-                }
-              
-            }
-
-            else if (ej == null && cl == null)   
+            else
             {
-                MessageBox.Show("El rut ingresado es incorrecto");
-            }
+                Cliente clCrud = new Cliente();
+                Cliente cl = clCrud.Read(textBox_rut.Text);
+                Ejecutivo ejCrud = new Ejecutivo();
+                Ejecutivo ej = ejCrud.Read(textBox_rut.Text);
+                if (cl != null)
+                {
+                    if (cl.Password.Equals(textBox_password.Text))
+                    {
+                        MessageBox.Show("Ingresó correctamente");
+                        ventana_cliente vc = new ventana_cliente();
+                        vc.Elcliente = cl;
+                        vc.Show();
+                        this.Hide();
+                        vc.Visible = false;
+                        vc.ShowDialog();
+                        this.Dispose();
+                    }
 
+                    else
+                    {
+                        MessageBox.Show("Password incorrecta");
+                    }
+
+                }
+                else if (ej != null)
+                {
+                    if (ej.Password.Equals(textBox_password.Text))
+                    {
+
+                        MessageBox.Show("Ingresó correctamente");
+                        ventana_ejecutivo ve = new ventana_ejecutivo();
+                        ve.Show();
+                        this.Hide();
+                        ve.Visible = false;
+                        ve.ShowDialog();
+                        this.Dispose();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Password incorrecta");
+                    }
+
+                }
+
+                else if (ej == null && cl == null)
+                {
+                    MessageBox.Show("El rut ingresado es incorrecto");
+                }
+            }
 
         }
 

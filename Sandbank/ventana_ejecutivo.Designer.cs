@@ -32,6 +32,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Principal = new System.Windows.Forms.TabPage();
             this.tab_crearCuenta = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_registrar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tab_CreditoHipotecario = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button_hipotecario_aprobarcredito = new System.Windows.Forms.Button();
             this.comboBox_añohipotecario = new System.Windows.Forms.ComboBox();
             this.comboBox_meshipotecario = new System.Windows.Forms.ComboBox();
@@ -76,12 +78,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCerrarSession = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.Principal.SuspendLayout();
             this.tab_crearCuenta.SuspendLayout();
-            this.tab_CreditoHipotecario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tab_CreditoHipotecario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +103,7 @@
             // 
             this.Principal.BackgroundImage = global::Sandbank.Properties.Resources.logo;
             this.Principal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Principal.Controls.Add(this.btnCerrarSession);
             this.Principal.Location = new System.Drawing.Point(4, 22);
             this.Principal.Name = "Principal";
             this.Principal.Padding = new System.Windows.Forms.Padding(3);
@@ -137,6 +140,16 @@
             this.tab_crearCuenta.Size = new System.Drawing.Size(412, 448);
             this.tab_crearCuenta.TabIndex = 1;
             this.tab_crearCuenta.Text = "Cuenta corriente";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sandbank.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
             // 
             // button_registrar
             // 
@@ -185,6 +198,7 @@
             this.textBox_liquidacion.Name = "textBox_liquidacion";
             this.textBox_liquidacion.Size = new System.Drawing.Size(100, 20);
             this.textBox_liquidacion.TabIndex = 29;
+            this.textBox_liquidacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_liquidacion_KeyPress);
             // 
             // comboBox_año
             // 
@@ -502,6 +516,16 @@
             this.tab_CreditoHipotecario.Text = "Credito Hipotecario";
             this.tab_CreditoHipotecario.Click += new System.EventHandler(this.tab_CreditoHipotecario_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Sandbank.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(129, 55);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 56;
+            this.pictureBox2.TabStop = false;
+            // 
             // button_hipotecario_aprobarcredito
             // 
             this.button_hipotecario_aprobarcredito.Enabled = false;
@@ -789,6 +813,7 @@
             this.textBox_montohipotecario.Name = "textBox_montohipotecario";
             this.textBox_montohipotecario.Size = new System.Drawing.Size(100, 20);
             this.textBox_montohipotecario.TabIndex = 45;
+            this.textBox_montohipotecario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_montohipotecario_KeyPress);
             // 
             // label17
             // 
@@ -917,25 +942,16 @@
             this.label14.TabIndex = 30;
             this.label14.Text = "Nombre";
             // 
-            // pictureBox1
+            // btnCerrarSession
             // 
-            this.pictureBox1.Image = global::Sandbank.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Sandbank.Properties.Resources.logo;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(129, 55);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 56;
-            this.pictureBox2.TabStop = false;
+            this.btnCerrarSession.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSession.Location = new System.Drawing.Point(150, 385);
+            this.btnCerrarSession.Name = "btnCerrarSession";
+            this.btnCerrarSession.Size = new System.Drawing.Size(99, 23);
+            this.btnCerrarSession.TabIndex = 0;
+            this.btnCerrarSession.Text = "Cerrar Sesión";
+            this.btnCerrarSession.UseVisualStyleBackColor = true;
+            this.btnCerrarSession.Click += new System.EventHandler(this.btnCerrarSession_Click);
             // 
             // ventana_ejecutivo
             // 
@@ -948,11 +964,12 @@
             this.Name = "ventana_ejecutivo";
             this.Text = "Ejecutivo SandBank";
             this.tabControl1.ResumeLayout(false);
+            this.Principal.ResumeLayout(false);
             this.tab_crearCuenta.ResumeLayout(false);
             this.tab_crearCuenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tab_CreditoHipotecario.ResumeLayout(false);
             this.tab_CreditoHipotecario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -1009,5 +1026,6 @@
         private System.Windows.Forms.Button button_hipotecario_aprobarcredito;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnCerrarSession;
     }
 }
