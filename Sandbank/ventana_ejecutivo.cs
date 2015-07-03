@@ -19,23 +19,17 @@ namespace Sandbank
             
         }
 
-       
+        private void button_creditoHipotecario_Click(object sender, EventArgs e)
+        {
+            ventana_creditoHipotecario vch = new ventana_creditoHipotecario();
+            vch.Show();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            button_cuota.Enabled=false;
-            button_hipotecario_aprobarcredito.Enabled = false;
-            textBox_liquidacionhipotecario.Text = "";
-            textBox_interes.Text = "";
-            textBox_cuota.Text = "";
-            textBox_montohipotecario.Text = "";
-            if (textBox_ruthipotecario.Text.Trim().Equals(""))
+            if (textBox_ruthipotecario.Text.Equals(""))
             {
                 MessageBox.Show("Debe ingresar Un Rut para verificacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(!RutValido(textBox_ruthipotecario.Text))
-            {
-                MessageBox.Show("Ingrese un rut válido");
             }
             else
             {
@@ -48,30 +42,18 @@ namespace Sandbank
                 if (cl == null)
                 {
                     MessageBox.Show("el cliente no posee una cuenta corriente, si cumple con los requisitos se le creará una automaticamente");
-                    button_cuota.Enabled=true;
                     textBox_nombrehipotecario.Text = "";
                     textBox_apellidohipotecario.Text = "";
                     textBox_direccionhipotecario.Text = "";
                     textBox_liquidacionhipotecario.Text = "";
                     verificar = 0;
-                    //se habilitan los campos
-                    textBox_nombrehipotecario.ReadOnly = false;
-                    textBox_apellidohipotecario.ReadOnly = false;
-                    textBox_direccionhipotecario.ReadOnly = false;
-                    textBox_liquidacionhipotecario.ReadOnly = false;
-                    comboBox_añohipotecario.Enabled = true;
-                    comboBox_diahipotecario.Enabled = true;
-                    comboBox_meshipotecario.Enabled = true;
-                    
-                    textBox_interes.Text = "";
-
                 }
                 else
                 {
 
 
                     verificar = 1;
-                    button_cuota.Enabled=true;
+
                     //Se bloquean los campos
                     textBox_nombrehipotecario.ReadOnly = true;
                     textBox_apellidohipotecario.ReadOnly = true;
@@ -100,7 +82,7 @@ namespace Sandbank
                     for (int i = 0; i < comboBox_meshipotecario.Items.Count; i++)
                     {
                         comboBox_meshipotecario.SelectedIndex = i;
-                        if (i == Convert.ToInt32(fecha[1]))
+                        if (i == Convert.ToInt32(fecha[1]) - 1)
                         {
                             break;
                         }
@@ -109,7 +91,7 @@ namespace Sandbank
                     for (int i = 0; i < comboBox_diahipotecario.Items.Count; i++)
                     {
                         comboBox_diahipotecario.SelectedIndex = i;
-                        if (i == Convert.ToInt32(fecha[0]))
+                        if (i == Convert.ToInt32(fecha[0]) - 1)
                         {
                             break;
                         }
@@ -122,15 +104,11 @@ namespace Sandbank
         private void button2_Click(object sender, EventArgs e)
         {
 
-            if (Convert.ToString(comboBox_añosCredito.SelectedItem).Equals("") || textBox_ruthipotecario.Text.Trim().Equals("")
-                || textBox_nombrehipotecario.Text.Trim().Equals("") || textBox_apellidohipotecario.Text.Trim().Equals("") || textBox_direccionhipotecario.Text.Trim().Equals("")
+            if (Convert.ToString(comboBox_añosCredito.SelectedItem).Equals("") || textBox_ruthipotecario.Text.Equals("")
+                || textBox_nombrehipotecario.Text.Equals("") || textBox_apellidohipotecario.Text.Equals("") || textBox_direccionhipotecario.Text.Equals("")
                 || comboBox_diahipotecario.SelectedItem.Equals("") || comboBox_meshipotecario.SelectedItem.Equals("") || comboBox_añohipotecario.SelectedItem.Equals(""))
             {
                 MessageBox.Show("Debe Completar todos los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(Convert.ToInt32(textBox_montohipotecario.Text)<100000)
-            {
-                MessageBox.Show("No puede pedir un monto menor a 100000");
             }
             else
             {
@@ -159,74 +137,50 @@ namespace Sandbank
             }
         }
 
-
         private void button_registrar_Click(object sender, EventArgs e)
         {
             if (comboBox_mes.SelectedItem.Equals("Mes") || comboBox_dia.SelectedItem.Equals("Día") ||
-                comboBox_año.SelectedItem.Equals("Año") || textBox_rut.Text.Trim().Equals("") || textBox_nombre.Text.Trim().Equals("")
-                || textBox_apellidop.Text.Trim().Equals("") || textBox_direccion.Text.Trim().Equals("") || textBox_liquidacion.Text.Trim().Equals(""))
+                comboBox_año.SelectedItem.Equals("Año") || textBox_rut.Text.Equals("") || textBox_nombre.Text.Equals("")
+                || textBox_apellidop.Text.Equals("") || textBox_direccion.Text.Equals("") || textBox_liquidacion.Text.Equals(""))
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                
-                
-                string mes = Convert.ToString(comboBox_mes.SelectedIndex );
-                string mess = Convert.ToString(comboBox_mes.SelectedItem);
-                int dia = Convert.ToInt32(comboBox_dia.SelectedItem);
-                string año = Convert.ToString(comboBox_año.SelectedItem);
-                string d = Convert.ToString(comboBox_dia.SelectedItem);
-                Cliente clCrud = new Cliente();
-                Cliente cl = new Cliente();
-                cuentaCorriente ccCrud = new cuentaCorriente();
-                cuentaCorriente cc = new cuentaCorriente();
-                cuentaCorriente comp = ccCrud.Read(textBox_rut.Text);
-                
-
+            string mes = Convert.ToString(comboBox_mes.SelectedIndex );
+            string mess = Convert.ToString(comboBox_mes.SelectedItem);
+            int dia = Convert.ToInt32(comboBox_dia.SelectedItem);
+            string año = Convert.ToString(comboBox_año.SelectedItem);
+            string d = Convert.ToString(comboBox_dia.SelectedItem);
+            Cliente clCrud = new Cliente();
+            Cliente cl = new Cliente();
+            cuentaCorriente ccCrud = new cuentaCorriente();
+            cuentaCorriente cc = new cuentaCorriente();
             if ((mess.Equals("Febrero") && dia > 28) || ((mess.Equals("Abril") || mess.Equals("Junio") || mess.Equals("Septiembre") || mess.Equals("Noviembre")) && dia > 30) || (año.Equals("") || d.Equals("") || mes.Equals("")))
             {
                 MessageBox.Show("Ingrese fecha válida");
-            }
-            else if(!RutValido(textBox_rut.Text))
-            {
-                MessageBox.Show("Ingrese rut válido");
             }
             else if (Convert.ToInt32(textBox_liquidacion.Text) < 400000)
             {
                 MessageBox.Show("Su sueldo debe ser mayor a 400.000 lo sentimos");
             }
-            else if (comp != null)
+            else 
             {
-                MessageBox.Show("El rut ingresado ya posee una cuenta corriente");
-            }
+                
+                    cl.Rut = textBox_rut.Text;
+                    cl.Nombre = textBox_nombre.Text;
+                    cl.Apellido = textBox_apellidop.Text;
+                    cl.Direccion = textBox_direccion.Text;
+                    cl.Fecha = d + "-" + mes + "-" + año;
+                    cl.Sueldo = Convert.ToInt32(textBox_liquidacion.Text);
+                    cl.Password = cl.Rut;
+                    textBox_password.Text = textBox_rut.Text;
 
-            else
-            {
-
-                cl.Rut = textBox_rut.Text;
-                cl.Nombre = textBox_nombre.Text;
-                cl.Apellido = textBox_apellidop.Text;
-                cl.Direccion = textBox_direccion.Text;
-                cl.Fecha = d + "-" + mes + "-" + año;
-                cl.Sueldo = Convert.ToInt32(textBox_liquidacion.Text);
-                cl.Password = cl.Rut;
-                textBox_password.Text = textBox_rut.Text;
-
-                if (clCrud.crea_cliente(cl) && ccCrud.crea_cuenta(cl))
-                {
-                    MessageBox.Show("Cuenta corriente creada");
-                    textBox_rut.Text="";
-                    textBox_nombre.Text="";
-                    textBox_password.Text="";
-                    textBox_apellidop.Text="";
-                    textBox_direccion.Text="";
-                    textBox_liquidacion.Text="";
-                    comboBox_año.SelectedIndex=0;
-                    comboBox_dia.SelectedIndex=0;
-                    comboBox_mes.SelectedIndex=0;
+                    if (clCrud.crea_cliente(cl) && ccCrud.crea_cuenta(cl))
+                    {
+                        MessageBox.Show("Cuenta corriente creada");
+                    }
                 }
-            }
                 
             }
         }
@@ -316,15 +270,8 @@ namespace Sandbank
                                 textBox_liquidacionhipotecario.Text = "";
                                 textBox_interes.Text = "";
                                 textBox_cuota.Text = "";
-                                
+                                comboBox_añohipotecario.SelectedIndex = 0;
                                 comboBox_añohipotecario.Enabled = true;
-                                comboBox_meshipotecario.Enabled = true;
-                                comboBox_diahipotecario.Enabled = true;
-                                comboBox_añohipotecario.SelectedIndex=0;
-                                comboBox_meshipotecario.SelectedIndex=0;
-                                comboBox_diahipotecario.SelectedIndex=0;
-                                comboBox_añosCredito.SelectedIndex=0;
-                                button_cuota.Enabled=false;
                             }
                         }
                         else if (verificar == 1)
@@ -342,13 +289,6 @@ namespace Sandbank
                                 textBox_cuota.Text = "";
                                 comboBox_añohipotecario.SelectedIndex = 0;
                                 comboBox_añohipotecario.Enabled = true;
-                                comboBox_meshipotecario.Enabled = true;
-                                comboBox_diahipotecario.Enabled = true;
-                                button_cuota.Enabled=false;
-                                comboBox_añohipotecario.SelectedIndex=0;
-                                comboBox_meshipotecario.SelectedIndex=0;
-                                comboBox_diahipotecario.SelectedIndex=0;
-                                comboBox_añosCredito.SelectedIndex=0;
                             }
                         }
                         else
@@ -404,37 +344,5 @@ namespace Sandbank
                 e.Handled = true;
             }
         }
-
-         public bool RutValido(string rut) {
-            try {
-                if(!rut.Contains("-")) {
-                    return false;
-                }
-                rut =  rut.ToUpper();
-                rut = rut.Replace(".", "");
-                rut = rut.Replace("-", "");
-                
-                char dv = char.Parse(rut.Substring(rut.Length - 1, 1));
-
-                int m = 0, s = 1;
-                for (int rutAux = int.Parse(rut.Substring(0, rut.Length - 1)) ; rutAux != 0; rutAux /= 10) {
-                    s = (s + rutAux % 10 * (9 - m++ % 6)) % 11;
-                }
-                if (dv == (char) (s != 0 ? s + 47 : 75)) {
-                    return true;
-                }
-            } catch {
-            }
-        return false;
-        }
-
-         private void textBox_liquidacionhipotecario_KeyPress(object sender, KeyPressEventArgs e)
-         {
-             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-         }
-
     }
 }

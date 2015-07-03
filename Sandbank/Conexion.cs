@@ -22,7 +22,7 @@ namespace Sandbank
         public void abreConexion()
         {
             conexion = new SqlConnection();
-            conexion.ConnectionString = "Data Source=localhost; Initial Catalog=sandbank; Integrated Security=true;";
+            conexion.ConnectionString = "Data Source=David-Notebook\\SQLEXPRESS; Initial Catalog=sandbank; Integrated Security=true;";
             try
             {
                 conexion.Open();

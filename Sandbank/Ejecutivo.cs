@@ -57,7 +57,7 @@ namespace Sandbank
             {
                 con.abreConexion();
                 SqlCommand comando = new SqlCommand();
-                comando.CommandText = "select * from ejecutivos where rut='" + r + "'";
+                comando.CommandText = "select * from ejecutivos where rut=" + r + "";
                 comando.Connection = con.usaConexion();
                 SqlDataReader reader = comando.ExecuteReader();
                 if (reader.Read())

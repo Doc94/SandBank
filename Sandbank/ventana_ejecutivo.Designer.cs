@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana_ejecutivo));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Principal = new System.Windows.Forms.TabPage();
-            this.btnCerrarSession = new System.Windows.Forms.Button();
             this.tab_crearCuenta = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_registrar = new System.Windows.Forms.Button();
@@ -58,7 +57,7 @@
             this.comboBox_añohipotecario = new System.Windows.Forms.ComboBox();
             this.comboBox_meshipotecario = new System.Windows.Forms.ComboBox();
             this.comboBox_diahipotecario = new System.Windows.Forms.ComboBox();
-            this.button_cuota = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.textBox_cuota = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -79,6 +78,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.btnCerrarSession = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Principal.SuspendLayout();
             this.tab_crearCuenta.SuspendLayout();
@@ -111,17 +111,6 @@
             this.Principal.TabIndex = 0;
             this.Principal.Text = "Principal";
             this.Principal.UseVisualStyleBackColor = true;
-            // 
-            // btnCerrarSession
-            // 
-            this.btnCerrarSession.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSession.Location = new System.Drawing.Point(150, 385);
-            this.btnCerrarSession.Name = "btnCerrarSession";
-            this.btnCerrarSession.Size = new System.Drawing.Size(99, 23);
-            this.btnCerrarSession.TabIndex = 0;
-            this.btnCerrarSession.Text = "Cerrar Sesión";
-            this.btnCerrarSession.UseVisualStyleBackColor = true;
-            this.btnCerrarSession.Click += new System.EventHandler(this.btnCerrarSession_Click);
             // 
             // tab_crearCuenta
             // 
@@ -314,7 +303,25 @@
             "1994",
             "1995",
             "1996",
-            "1997"});
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015"});
             this.comboBox_año.Location = new System.Drawing.Point(303, 250);
             this.comboBox_año.Name = "comboBox_año";
             this.comboBox_año.Size = new System.Drawing.Size(59, 21);
@@ -481,7 +488,7 @@
             this.tab_CreditoHipotecario.Controls.Add(this.comboBox_añohipotecario);
             this.tab_CreditoHipotecario.Controls.Add(this.comboBox_meshipotecario);
             this.tab_CreditoHipotecario.Controls.Add(this.comboBox_diahipotecario);
-            this.tab_CreditoHipotecario.Controls.Add(this.button_cuota);
+            this.tab_CreditoHipotecario.Controls.Add(this.button2);
             this.tab_CreditoHipotecario.Controls.Add(this.textBox_cuota);
             this.tab_CreditoHipotecario.Controls.Add(this.label15);
             this.tab_CreditoHipotecario.Controls.Add(this.label16);
@@ -635,7 +642,25 @@
             "1994",
             "1995",
             "1996",
-            "1997"});
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015"});
             this.comboBox_añohipotecario.Location = new System.Drawing.Point(288, 201);
             this.comboBox_añohipotecario.Name = "comboBox_añohipotecario";
             this.comboBox_añohipotecario.Size = new System.Drawing.Size(59, 21);
@@ -706,18 +731,17 @@
             this.comboBox_diahipotecario.Size = new System.Drawing.Size(46, 21);
             this.comboBox_diahipotecario.TabIndex = 52;
             // 
-            // button_cuota
+            // button2
             // 
-            this.button_cuota.Enabled = false;
-            this.button_cuota.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_cuota.ForeColor = System.Drawing.Color.DarkGreen;
-            this.button_cuota.Location = new System.Drawing.Point(20, 372);
-            this.button_cuota.Name = "button_cuota";
-            this.button_cuota.Size = new System.Drawing.Size(103, 23);
-            this.button_cuota.TabIndex = 51;
-            this.button_cuota.Text = "Calcular cuota";
-            this.button_cuota.UseVisualStyleBackColor = true;
-            this.button_cuota.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button2.Location = new System.Drawing.Point(20, 372);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 23);
+            this.button2.TabIndex = 51;
+            this.button2.Text = "Calcular cuota";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox_cuota
             // 
@@ -829,7 +853,6 @@
             this.textBox_liquidacionhipotecario.Name = "textBox_liquidacionhipotecario";
             this.textBox_liquidacionhipotecario.Size = new System.Drawing.Size(100, 20);
             this.textBox_liquidacionhipotecario.TabIndex = 40;
-            this.textBox_liquidacionhipotecario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_liquidacionhipotecario_KeyPress);
             // 
             // textBox_direccionhipotecario
             // 
@@ -919,6 +942,17 @@
             this.label14.TabIndex = 30;
             this.label14.Text = "Nombre";
             // 
+            // btnCerrarSession
+            // 
+            this.btnCerrarSession.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSession.Location = new System.Drawing.Point(150, 385);
+            this.btnCerrarSession.Name = "btnCerrarSession";
+            this.btnCerrarSession.Size = new System.Drawing.Size(99, 23);
+            this.btnCerrarSession.TabIndex = 0;
+            this.btnCerrarSession.Text = "Cerrar Sesión";
+            this.btnCerrarSession.UseVisualStyleBackColor = true;
+            this.btnCerrarSession.Click += new System.EventHandler(this.btnCerrarSession_Click);
+            // 
             // ventana_ejecutivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -985,7 +1019,7 @@
         private System.Windows.Forms.TextBox textBox_montohipotecario;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button_cuota;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox_añohipotecario;
         private System.Windows.Forms.ComboBox comboBox_meshipotecario;
         private System.Windows.Forms.ComboBox comboBox_diahipotecario;

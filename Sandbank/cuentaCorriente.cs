@@ -124,21 +124,17 @@ namespace Sandbank
                 //Ejecutamos el comando
                 comando.CommandText = "UPDATE cuenta_corriente SET saldo=" + monto_origen + " WHERE rut='" + rut_origen + "'";
                 if(comando.ExecuteNonQuery() < 1) {
-                    trans.Rollback();
                     return false;
                 }
                 comando.CommandText = "UPDATE cuenta_corriente SET saldo=" + monto_destino + " WHERE rut='" + rut_destino + "'";
                 if(comando.ExecuteNonQuery() < 1) {
-                    trans.Rollback();
                     return false;
                 }
                 comando.CommandText = "INSERT INTO transferencias VALUES('" + log.Rut + "'," + log.Monto + ",'" + log.Comentario + "','" + log.Destinatario + "','" + log.Fecha + "')";
                 if(comando.ExecuteNonQuery() < 1) {
-                    trans.Rollback();
                     return false;
                 }
                 trans.Commit();
-                con.cierraConexion();
                 return true;
             } catch {
                 trans.Rollback();

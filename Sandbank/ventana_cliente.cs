@@ -73,10 +73,6 @@ namespace Sandbank
             textBox_inicio_direccion.Text = elcliente.Direccion;
             textBox_inicio_fecha.Text = elcliente.Fecha;
             textBox_inicio_sueldo.Text = elcliente.Sueldo.ToString();
-            cuentaCorriente cc = new cuentaCorriente();
-
-            textBox__inicio_saldo.Text = cc.Read(Elcliente.Rut).Saldo.ToString();
-            textBox_inicio_cupo.Text = cc.Read(Elcliente.Rut).Credito.ToString();
         }
 
         private void ventana_cliente_Load(object sender, EventArgs e)
@@ -89,21 +85,9 @@ namespace Sandbank
             cuentaCorriente ccrud = new cuentaCorriente();
             cuentaCorriente rdestinatario = ccrud.Read(textBox_transferencia_rutdestiono.Text);
             cuentaCorriente rtranfer = ccrud.Read(elcliente.Rut);
-            if(textBox_transferencia_rutdestiono.Text.Trim().Equals("")||textBox_transferencia_monto.Text.Trim().Equals("")||textBox_transferencia_comentario.Text.Trim().Equals(""))
+            if (rdestinatario == null)
             {
-                MessageBox.Show("Rellene los campos vacíos");
-            }
-            else if (rdestinatario == null)
-            {
-                MessageBox.Show("el rut ingresado no se encuentra por favor ingreselo nuevamente");
-            }
-            else if (Convert.ToInt32(textBox_transferencia_monto.Text)<2000)
-            {
-                MessageBox.Show("El monto minimo es 2000");
-            }
-            else if (textBox_transferencia_rutdestiono.Text == rtranfer.Rut)
-            {
-                MessageBox.Show("no puedes transferirte a ti mismo");
+
             }
             else
             {
@@ -112,7 +96,7 @@ namespace Sandbank
                 DateTime Hoy = DateTime.Today;
                 int saldo2 = saldo - monto;
                 string fecha_actual = Hoy.ToString("dd-MM-yyyy");
-
+                
 
                 Transferencia t = new Transferencia();
                 Transferencia tcrud = new Transferencia();
@@ -124,8 +108,8 @@ namespace Sandbank
                 }
                 else
                 {
-
-
+                    
+                    
                     t.Rut = elcliente.Rut;
                     t.Monto = monto;
                     t.Comentario = textBox_transferencia_comentario.Text;
@@ -134,12 +118,9 @@ namespace Sandbank
                     rtranfer.Saldo = saldo2;
                     rdestinatario.Saldo = rdestinatario.Saldo + monto;
                     int saldodestino = rdestinatario.Saldo;
-                    if (ccrud.RealizarTransferencia(t.Rut, t.Destinatario, saldo2, saldodestino, t))
-                    {
+                    if(ccrud.RealizarTransferencia(t.Rut,t.Destinatario,saldo2, saldodestino, t)) {
                         MessageBox.Show("Transferencia realizada");
-                    }
-                    else
-                    {
+                    } else {
                         MessageBox.Show("ERROR!!");
                     }
                     /*
