@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana_cliente));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox_inicio_cupo = new System.Windows.Forms.TextBox();
+            this.textBox__inicio_saldo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.textBox_inicio_sueldo = new System.Windows.Forms.TextBox();
             this.textBox_inicio_fecha = new System.Windows.Forms.TextBox();
             this.textBox_inicio_direccion = new System.Windows.Forms.TextBox();
@@ -54,15 +60,13 @@
             this.textBox_transferencia_rutdestiono = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -80,6 +84,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.textBox_inicio_cupo);
+            this.tabPage1.Controls.Add(this.textBox__inicio_saldo);
+            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.btnCerrarSesion);
             this.tabPage1.Controls.Add(this.textBox_inicio_sueldo);
@@ -100,6 +108,62 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Inicio";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(24, 334);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 15);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Crédito";
+            // 
+            // textBox_inicio_cupo
+            // 
+            this.textBox_inicio_cupo.Location = new System.Drawing.Point(83, 331);
+            this.textBox_inicio_cupo.Name = "textBox_inicio_cupo";
+            this.textBox_inicio_cupo.ReadOnly = true;
+            this.textBox_inicio_cupo.Size = new System.Drawing.Size(100, 23);
+            this.textBox_inicio_cupo.TabIndex = 14;
+            // 
+            // textBox__inicio_saldo
+            // 
+            this.textBox__inicio_saldo.Location = new System.Drawing.Point(83, 298);
+            this.textBox__inicio_saldo.Name = "textBox__inicio_saldo";
+            this.textBox__inicio_saldo.ReadOnly = true;
+            this.textBox__inicio_saldo.Size = new System.Drawing.Size(100, 23);
+            this.textBox__inicio_saldo.TabIndex = 13;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(25, 301);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 15);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Saldo";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sandbank.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(200, 173);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(428, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(310, 331);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(200, 27);
+            this.btnCerrarSesion.TabIndex = 10;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox_inicio_sueldo
             // 
@@ -324,28 +388,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "RUT Destinatario";
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(310, 331);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(200, 27);
-            this.btnCerrarSesion.TabIndex = 10;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Sandbank.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(200, 173);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(428, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // ventana_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,18 +397,18 @@
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ventana_cliente";
-            this.Text = "ventana_cliente";
+            this.Text = "Cliente sandbank";
             this.Load += new System.EventHandler(this.ventana_cliente_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,6 +442,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox_inicio_cupo;
+        private System.Windows.Forms.TextBox textBox__inicio_saldo;
+        private System.Windows.Forms.Label label10;
 
     }
 }

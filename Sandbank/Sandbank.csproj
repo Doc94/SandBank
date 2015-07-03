@@ -66,12 +66,6 @@
     <Compile Include="ventana_cliente.Designer.cs">
       <DependentUpon>ventana_cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ventana_creditoHipotecario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ventana_creditoHipotecario.Designer.cs">
-      <DependentUpon>ventana_creditoHipotecario.cs</DependentUpon>
-    </Compile>
     <Compile Include="ventana_ejecutivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,9 +87,6 @@
     </Compile>
     <EmbeddedResource Include="ventana_cliente.resx">
       <DependentUpon>ventana_cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ventana_creditoHipotecario.resx">
-      <DependentUpon>ventana_creditoHipotecario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ventana_ejecutivo.resx">
       <DependentUpon>ventana_ejecutivo.cs</DependentUpon>
